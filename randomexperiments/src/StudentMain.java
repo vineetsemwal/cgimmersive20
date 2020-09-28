@@ -22,19 +22,20 @@ public class StudentMain {
 	}
 
 	public void displayStudents() {
-		for (Student iterated : students) {
-			int id = iterated.getId();
-			String name = iterated.getName();
+		for (int i=0;i<students.length;i++) {
+			Student student=students[i];
+			int id = student.getId();
+			String name = student.getName();
 			System.out.println("student detail is " + id + " " + name);
-			boolean isEce=iterated instanceof ElectronicStudent;
+			boolean isEce=student instanceof ElectronicStudent;
 			if(isEce) {
-				ElectronicStudent eceStudent=(ElectronicStudent)iterated;
+				ElectronicStudent eceStudent=(ElectronicStudent)student;
 			    String device= eceStudent.getDevice();
 			    System.out.println(" device available "+device);
 			}
-			boolean isCse=iterated instanceof ComputerScienceStudent;
+			boolean isCse=student instanceof ComputerScienceStudent;
 			if(isCse) {
-				ComputerScienceStudent cseStudent=(ComputerScienceStudent)iterated;
+				ComputerScienceStudent cseStudent=(ComputerScienceStudent)student;
 				String language=cseStudent.getLanguage();
 				String laptop=cseStudent.getLaptop();
 				System.out.println("laptop is "+laptop+" language is "+language);
