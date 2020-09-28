@@ -10,9 +10,9 @@ public class Student {
 	}
 	
 	Student(int idArg,String nameArg){
+		System.out.println("inside Student 2 args ctr");
 		id=idArg;
-		this.name=nameArg;
-		
+		this.name=nameArg;		
 	}
 	
 	int id;
