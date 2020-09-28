@@ -8,9 +8,13 @@ public class StudentMain {
 	    Student students[]=new Student[2];
 	    students[0]=student1;
 	    students[1]=student2;
-		for(int i=0;i <students.length;i++)
+	    for(int i=0;i<students.length;i++) {
+	    	Student iterated=students[i];
+	    	String name=iterated.getName();
+			System.out.println("student detail is "+id+ " "+name);
+	    }
+		for(Student iterated:students)
 	    {
-			Student iterated=students[i];
 			int id=iterated.getId();
 			String name=iterated.getName();
 			System.out.println("student detail is "+id+ " "+name);
