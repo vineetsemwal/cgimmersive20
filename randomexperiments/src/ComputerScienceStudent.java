@@ -1,9 +1,9 @@
 
 public class ComputerScienceStudent extends Student{
-	String laptop;
-    String language;
+	private String laptop;
+    private String language;
     
-    ComputerScienceStudent(int id, String name, String laptop, String language){
+     public ComputerScienceStudent(int id, String name, String laptop, String language){
     	super(id,name);
     	this.laptop=laptop;
     	this.language=language;
@@ -11,19 +11,19 @@ public class ComputerScienceStudent extends Student{
 
     }
     
-    String getLaptop() {
+    public String getLaptop() {
     	return laptop;
     }
     
-    void setLaptop(String laptop) {
+    public void setLaptop(String laptop) {
     	this.laptop=laptop;
     }
     
-    String getLanguage() {
+    public String getLanguage() {
     	return language;
     }
     
-    void setLanguage(String language) {
+    public void setLanguage(String language) {
     	this.language=language;
     }
     

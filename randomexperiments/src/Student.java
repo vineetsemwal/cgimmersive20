@@ -15,8 +15,8 @@ public class Student {
 		this.name=nameArg;		
 	}
 	
-	int id;
-	String name;
+	private int id;
+	private String name;
 	
 	void setId(int id) {
 		this.id=id;

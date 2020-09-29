@@ -3,7 +3,7 @@ public class Bike extends Vehicle{
 	
 	//method over riding
 	@Override
-	void moves() {
+	public void moves() {
 		System.out.println("bike moves");
 	}
 

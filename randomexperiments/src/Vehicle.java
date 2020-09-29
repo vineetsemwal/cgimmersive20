@@ -1,8 +1,6 @@
 
-public class Vehicle {
+abstract public class Vehicle {
 
-	void moves(){
-	System.out.println("vehicle moves");	
-	}
+	abstract public void moves() ;
 	
 }

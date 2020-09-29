@@ -1,6 +1,6 @@
 
 public class StudentMain {
-	Student students[] = new Student[4];// field of StudentMain object
+	private Student students[] = new Student[4];// field of StudentMain object
 
 	public static void main(String args[]) {
 		StudentMain mainObj = new StudentMain();
