@@ -1,6 +1,5 @@
 
 abstract public class Vehicle {
 
-	abstract public void moves() ;
-	
+	abstract public void moves();
 }
