@@ -18,5 +18,7 @@ public class VehicleMain {
 			vehicle.moves();
 		}
 		
+		 		
+		
 	}
 }

@@ -19,6 +19,16 @@ public class StudentMain {
 		students[3]=csStudent2;
 		displayStudents();
 
+		// toString() method to convert object to string, mostly used for debugging to check what object contains
+		String eceStudent1String=eceStudent1.toString();
+        String cseStudent1String=csStudent1.toString();
+        System.out.println(eceStudent1String);
+        System.out.println(cseStudent1String);
+		ComputerScienceStudent csStudent4=new ComputerScienceStudent(4,"saiteja","dell","java");
+		ComputerScienceStudent csStudent5=new ComputerScienceStudent(4,"saiteja","dell","java");
+        boolean identity= csStudent4==csStudent5;// return false
+		boolean isEqual=csStudent4.equals(csStudent5);
+        System.out.println("identity="+identity+" equality="+isEqual);
 	}
 
 	public void displayStudents() {

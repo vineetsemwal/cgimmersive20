@@ -6,6 +6,7 @@ public class AcerCalculator implements ICalculator{
 		int result=num1+num2;
 		return result;
 	}	
+	
 
 	
 }
