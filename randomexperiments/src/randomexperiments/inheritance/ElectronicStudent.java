@@ -1,4 +1,4 @@
-package randomexeriments.inheritance;
+package randomexperiments.inheritance;
 
 public class ElectronicStudent extends Student{
 	

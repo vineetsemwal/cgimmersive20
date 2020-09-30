@@ -1,6 +1,6 @@
 package randomexperiments.exceptionhandling;
 
-import randomexeriments.inheritance.ElectronicStudent;
+import randomexperiments.inheritance.ElectronicStudent;
 
 public class ExceptionExample1 {
 	

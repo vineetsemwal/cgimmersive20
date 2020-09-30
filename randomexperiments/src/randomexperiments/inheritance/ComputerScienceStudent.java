@@ -1,4 +1,4 @@
-package randomexeriments.inheritance;
+package randomexperiments.inheritance;
 
 public class ComputerScienceStudent extends Student{
 	private String laptop;
