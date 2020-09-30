@@ -24,7 +24,7 @@ public class VowelsExample {
 		
 	}
 	
-	String findVowels(String input) throws InvalidArgumentException,NoVowelFoundException {
+	String findVowels(String input)  {
 		if(input==null || input.isEmpty()) {
 			throw new InvalidArgumentException("input is null or empty");
 		}

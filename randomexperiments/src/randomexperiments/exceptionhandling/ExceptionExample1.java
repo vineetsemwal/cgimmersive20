@@ -15,7 +15,7 @@ public class ExceptionExample1 {
 		}
 	}
 	
-	void display(ElectronicStudent student) throws InvalidArgumentException{
+	void display(ElectronicStudent student) {
 		if(student==null) {
 		InvalidArgumentException e=	new InvalidArgumentException("student is null");	
 		throw e;	
