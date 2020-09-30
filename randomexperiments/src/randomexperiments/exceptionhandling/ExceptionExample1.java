@@ -5,14 +5,17 @@ import randomexperiments.inheritance.ElectronicStudent;
 public class ExceptionExample1 {
 	
 	public static void main(String args[]) {
+		try {
 		ExceptionExample1 example=new ExceptionExample1();
 		ElectronicStudent student=null;
 		example.display(student);
 		System.out.println("after display method");
+		}catch(InvalidArgumentException e) {
+			System.out.println("you are passing invalid arguments");
+		}
 	}
 	
-	void display(ElectronicStudent student) {
-		try {
+	void display(ElectronicStudent student) throws InvalidArgumentException{
 		if(student==null) {
 		InvalidArgumentException e=	new InvalidArgumentException("student is null");	
 		throw e;	
@@ -21,12 +24,8 @@ public class ExceptionExample1 {
 		int id=student.getId();
 		String name=student.getName();
 		System.out.println("id="+id+" name="+name);
-		}
-		catch(InvalidArgumentException e) {
-			String msg=e.getMessage();
-			System.out.println("exception caught "+msg);
-		}
-	
 	}
+	
+	
 
 }
