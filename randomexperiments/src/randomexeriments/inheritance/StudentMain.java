@@ -1,3 +1,4 @@
+package randomexeriments.inheritance;
 
 public class StudentMain {
 	private Student students[] = new Student[4];// field of StudentMain object

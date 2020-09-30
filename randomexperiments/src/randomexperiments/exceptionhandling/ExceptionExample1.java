@@ -1,3 +1,6 @@
+package randomexperiments.exceptionhandling;
+
+import randomexeriments.inheritance.ElectronicStudent;
 
 public class ExceptionExample1 {
 	
@@ -10,13 +13,20 @@ public class ExceptionExample1 {
 	
 	void display(ElectronicStudent student) {
 		try {
+		if(student==null) {
+		InvalidArgumentException e=	new InvalidArgumentException("student is null");	
+		throw e;	
+		}
 		System.out.println("parameter ="+student);
 		int id=student.getId();
 		String name=student.getName();
 		System.out.println("id="+id+" name="+name);
-		}catch(NullPointerException e) {
-			System.out.println("student is null so didnt display details");
 		}
+		catch(InvalidArgumentException e) {
+			String msg=e.getMessage();
+			System.out.println("exception caught "+msg);
+		}
+	
 	}
 
 }

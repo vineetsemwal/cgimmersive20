@@ -1,3 +1,4 @@
+package randomexeriments.inheritance;
 
 public class Car extends Vehicle{
 

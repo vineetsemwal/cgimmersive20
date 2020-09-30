@@ -1,3 +1,4 @@
+package randomexeriments.inheritance;
 
 public interface IScientific extends ICalculator{
 	

@@ -1,3 +1,4 @@
+package randomexeriments.inheritance;
 
 public interface ICalculator {
    int add(int a, int b);

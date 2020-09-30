@@ -1,3 +1,4 @@
+package randomexperiments.stringexamples;
 
 public class StringHandlingExample {
 	
