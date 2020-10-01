@@ -7,5 +7,6 @@ public class StringBuilderExample {
 		 builder1.append("-").append("telangana").append("-india");
 		 String str=builder1.toString();
 		 System.out.println("str="+str);
+		
 	 }
 }
