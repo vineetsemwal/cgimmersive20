@@ -8,14 +8,14 @@ public class SortingExample {
 
 	public static void main(String args[]) {
 		List<Student> list = new ArrayList<>();
-		list.add(new Student(2, "arvind"));
-		list.add(new Student(4, "sahitya"));
-		list.add(new Student(1, "kartikeya"));
-		list.add(new Student(3, "tushar"));
-		Comparator<Student> comparator = new StudentIdComparator();
+		list.add(new Student(2, "arvind",21));
+		list.add(new Student(4, "sahitya",22));
+		list.add(new Student(1, "kartikeya",20));
+		list.add(new Student(3, "tushar",19));
+		Comparator<Student> comparator = new StudentAgeComparator();
 		list.sort(comparator);
 		for (Student student : list) {
-			System.out.println(student.getId() + "-" + student.getName());
+			System.out.println(student.getId() + "-" + student.getName()+"-"+student.getAge());
 		}
 	}
 }

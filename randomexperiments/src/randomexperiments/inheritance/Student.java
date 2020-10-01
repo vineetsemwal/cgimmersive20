@@ -3,17 +3,18 @@ package randomexperiments.inheritance;
 public class Student {
 
     public Student() {
-        this(-1, "");
+        this(-1, "",0);
     }
 
    public Student(int id) {
-        this(id, "");
+        this(id, "",0);
     }
 
-   public Student(int idArg, String nameArg) {
+   public Student(int idArg, String nameArg,int age) {
         System.out.println("inside Student 2 args ctr");
         id = idArg;
         this.name = nameArg;
+        this.age=age;
     }
 
     private int id;
@@ -35,7 +36,18 @@ public class Student {
         return name;
     }
 
-    @Override
+    private int age;
+    
+    
+    public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
     public String toString() {
         String str = id + "-" + name;
         return str;

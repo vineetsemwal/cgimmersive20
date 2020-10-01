@@ -9,10 +9,10 @@ public class StudentMain {
 	}
 
 	public void execute() {
-		ElectronicStudent eceStudent1=new ElectronicStudent(1,"abhishek","multimeter");
-		ElectronicStudent eceStudent2=new ElectronicStudent(2,"aniket","multimeter");
-		ComputerScienceStudent csStudent1=new ComputerScienceStudent(3,"saiteja","dell","java");
-		ComputerScienceStudent csStudent2=new ComputerScienceStudent(4,"saksham","acer","python");
+		ElectronicStudent eceStudent1=new ElectronicStudent(1,"abhishek",21,"multimeter");
+		ElectronicStudent eceStudent2=new ElectronicStudent(2,"aniket",22,"multimeter");
+		ComputerScienceStudent csStudent1=new ComputerScienceStudent(3,"saiteja",23,"dell","java");
+		ComputerScienceStudent csStudent2=new ComputerScienceStudent(4,"saksham",24,"acer","python");
  
 		students[0]=eceStudent1;
 		students[1]=eceStudent2;
@@ -25,8 +25,8 @@ public class StudentMain {
         String cseStudent1String=csStudent1.toString();
         System.out.println(eceStudent1String);
         System.out.println(cseStudent1String);
-		ComputerScienceStudent csStudent4=new ComputerScienceStudent(4,"saiteja","dell","java");
-		ComputerScienceStudent csStudent5=new ComputerScienceStudent(4,"saiteja","dell","java");
+		ComputerScienceStudent csStudent4=new ComputerScienceStudent(4,"saiteja",21,"dell","java");
+		ComputerScienceStudent csStudent5=new ComputerScienceStudent(4,"saiteja",21,"dell","java");
         boolean identity= csStudent4==csStudent5;// return false
 		boolean isEqual=csStudent4.equals(csStudent5);
         System.out.println("identity="+identity+" equality="+isEqual);
