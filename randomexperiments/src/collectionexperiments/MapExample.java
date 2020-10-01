@@ -6,7 +6,8 @@ import randomexperiments.inheritance.Student;
 
 public class MapExample {
 	public static void main(String args[]) {
-		Map<Integer, Student> map = new LinkedHashMap<>();
+		Comparator<Integer>comparator=new KeyComparator();
+		Map<Integer, Student> map = new TreeMap<>(comparator);
 		Student st1 = new Student(1, "shivam", 21);
 		map.put(1, st1);
 		map.put(3, new Student(3, "buratan", 21));
