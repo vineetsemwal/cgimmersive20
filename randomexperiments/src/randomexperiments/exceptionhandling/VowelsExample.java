@@ -10,13 +10,16 @@ public class VowelsExample {
 			System.out.println("vowels=" + vowels);
 			char firstVowel = vowels.charAt(0);
 			System.out.println("first vowel found is " + firstVowel);
+			
 		}
 
 		catch (InvalidArgumentException e) {
 			System.out.println("argument is null or empty so we cant find vowels");
-		} catch (NoVowelFoundException e) {
+		}
+		catch (NoVowelFoundException e) {
 			System.out.println("no vowel found in input so i cant tell you about first vowel");
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			System.out.println("something went wrong");
 
 		}

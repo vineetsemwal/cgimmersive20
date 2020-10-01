@@ -43,7 +43,7 @@ public class Student {
 
     /**
      * Student st1=new Student(1,"shivam");
-     * Stude st2=new Studen("1", "shivam");
+     * Student st2=new Student(1,"shivam");
      * boolean flag=st1.equals(st2);
      */
     @Override
