@@ -11,7 +11,6 @@ public class Student  implements Comparable<Student>{
     }
 
    public Student(int idArg, String nameArg,int age) {
-        System.out.println("inside Student 2 args ctr");
         id = idArg;
         this.name = nameArg;
         this.age=age;

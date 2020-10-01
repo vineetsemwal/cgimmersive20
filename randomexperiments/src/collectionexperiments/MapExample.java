@@ -9,8 +9,8 @@ public class MapExample {
 		Comparator<Integer>comparator=new KeyComparator();
 		Map<Integer, Student> map = new TreeMap<>(comparator);
 		Student st1 = new Student(1, "shivam", 21);
-		map.put(1, st1);
 		map.put(3, new Student(3, "buratan", 21));
+		map.put(1, st1);
 		map.put(2, new Student(2, "buratan", 21));
 		map.put(1, new Student(10, "harshil", 21));
 		int count = map.size();

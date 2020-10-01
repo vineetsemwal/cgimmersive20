@@ -1,57 +1,64 @@
 package randomexperiments.inheritance;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 public class StudentMain {
-	private Student students[] = new Student[4];// field of StudentMain object
+    //map of integer keys and student value
+    private Map<Integer, Student> store = new HashMap<>();
 
-	public static void main(String args[]) {
-		StudentMain mainObj = new StudentMain();
-		mainObj.execute();
-	}
+    public static void main(String args[]) {
+        StudentMain mainObj = new StudentMain();
+        mainObj.execute();
+    }
 
-	public void execute() {
-		ElectronicStudent eceStudent1=new ElectronicStudent(1,"abhishek",21,"multimeter");
-		ElectronicStudent eceStudent2=new ElectronicStudent(2,"aniket",22,"multimeter");
-		ComputerScienceStudent csStudent1=new ComputerScienceStudent(3,"saiteja",23,"dell","java");
-		ComputerScienceStudent csStudent2=new ComputerScienceStudent(4,"saksham",24,"acer","python");
- 
-		students[0]=eceStudent1;
-		students[1]=eceStudent2;
-		students[2]=csStudent1;
-		students[3]=csStudent2;
-		displayStudents();
+    public void execute() {
+        ElectronicStudent eceStudent1 = new ElectronicStudent(1, "abhishek", 21, "multimeter");
+        ElectronicStudent eceStudent2 = new ElectronicStudent(2, "aniket", 22, "multimeter");
+        ComputerScienceStudent csStudent1 = new ComputerScienceStudent(3, "saiteja", 23, "dell", "java");
+        ComputerScienceStudent csStudent2 = new ComputerScienceStudent(4, "saksham", 24, "acer", "python");
 
-		// toString() method to convert object to string, mostly used for debugging to check what object contains
-		String eceStudent1String=eceStudent1.toString();
-        String cseStudent1String=csStudent1.toString();
-        System.out.println(eceStudent1String);
-        System.out.println(cseStudent1String);
-		ComputerScienceStudent csStudent4=new ComputerScienceStudent(4,"saiteja",21,"dell","java");
-		ComputerScienceStudent csStudent5=new ComputerScienceStudent(4,"saiteja",21,"dell","java");
-        boolean identity= csStudent4==csStudent5;// return false
-		boolean isEqual=csStudent4.equals(csStudent5);
-        System.out.println("identity="+identity+" equality="+isEqual);
-	}
+        // currently keeping ids as keys in map
+        store.put(eceStudent1.getId(), eceStudent1);
+        store.put(eceStudent2.getId(), eceStudent2);
+        store.put(csStudent1.getId(), csStudent1);
+        store.put(csStudent2.getId(), csStudent2);
+        Student studentFound=findById(2);
+        System.out.println("student found  with id 2 "+studentFound.getId()+" "+studentFound.getName());
 
-	public void displayStudents() {
-		for (int i=0;i<students.length;i++) {
-			Student student=students[i];
-			int id = student.getId();
-			String name = student.getName();
-			System.out.println("student detail is " + id + " " + name);
-			boolean isEce=student instanceof ElectronicStudent;
-			if(isEce) {
-				ElectronicStudent eceStudent=(ElectronicStudent)student;
-			    String device= eceStudent.getDevice();
-			    System.out.println(" device available "+device);
-			}
-			boolean isCse=student instanceof ComputerScienceStudent;
-			if(isCse) {
-				ComputerScienceStudent cseStudent=(ComputerScienceStudent)student;
-				String language=cseStudent.getLanguage();
-				String laptop=cseStudent.getLaptop();
-				System.out.println("laptop is "+laptop+" language is "+language);
-			}
-		}
-	}
+        displayStudents();
+
+
+    }
+
+
+    public Student findById(int id) {
+        Student student = store.get(id);
+        return student;
+    }
+
+    public void displayStudents() {
+        System.out.println("displaying all students");
+        Collection<Student> values = store.values();
+        for (Student student : values) {
+            int id = student.getId();
+            String name = student.getName();
+            System.out.println("student detail is " + id + " " + name);
+            boolean isEce = student instanceof ElectronicStudent;
+            if (isEce) {
+                ElectronicStudent eceStudent = (ElectronicStudent) student;
+                String device = eceStudent.getDevice();
+                System.out.println(" device available " + device);
+            }
+            boolean isCse = student instanceof ComputerScienceStudent;
+            if (isCse) {
+                ComputerScienceStudent cseStudent = (ComputerScienceStudent) student;
+                String language = cseStudent.getLanguage();
+                String laptop = cseStudent.getLaptop();
+                System.out.println("laptop is " + laptop + " language is " + language);
+            }
+        }
+    }
 
 }

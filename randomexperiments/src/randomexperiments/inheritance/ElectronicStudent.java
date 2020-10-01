@@ -7,7 +7,6 @@ public class ElectronicStudent extends Student{
    public ElectronicStudent(int id, String name, int age, String device){
 	   super(id,name,age);
 	   this.device=device;
-	   System.out.println("after initialization in ElcectronicsStudent ctr");
 
    }
    

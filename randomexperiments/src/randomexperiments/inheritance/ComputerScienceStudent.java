@@ -8,7 +8,6 @@ public class ComputerScienceStudent extends Student{
     	super(id,name,age);
     	this.laptop=laptop;
     	this.language=language;
- 	   System.out.println("after initialization in ComputerScienceStudent ctr");
 
     }
     
