@@ -69,9 +69,15 @@ public class Student  implements Comparable<Student>{
         Student that = (Student) obj;
         return this.id == that.id;
     }
+    
+    @Override
+    public int hashCode() {
+    	return id;
+    }
 
 	@Override
 	public int compareTo(Student that) {
+		System.out.println("inside student's compareto "+this.id +" --"+that.id);
 		int compare=this.id-that.id;
 		return compare;
 	}
