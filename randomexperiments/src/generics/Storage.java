@@ -1,14 +1,14 @@
 package generics;
 
-public class Storage {
- private Object  value;
- 
- public void setValue(Object value) {
-	 this.value=value;
- }
- 
- public Object getValue() {
-	 return value;
- }
- 
+public class Storage<T> {
+	private T value;
+
+	public void setValue(T value) {
+		this.value = value;
+	}
+
+	public T getValue() {
+		return value;
+	}
+
 }
