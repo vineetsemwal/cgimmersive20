@@ -5,7 +5,7 @@ import java.util.*;
 public class ArrayListEx {
 
 	public static void main(String args[]) {
-		List<String> list = new ArrayList<>();
+		List<String> list = new LinkedList<>();
 		int count = list.size();
 		System.out.println("intial elements count =" + count);
 		list.add("shivam");
@@ -19,6 +19,7 @@ public class ArrayListEx {
 
 		list.remove(elementAtIndex2);
 		list.remove(1);
+		count=list.size();
 		System.out.println("removed 2 elements, count =" + count);
 
 		for (String element : list) {
