@@ -1,6 +1,6 @@
 package randomexperiments.inheritance;
 
-public class Student {
+public class Student  implements Comparable<Student>{
 
     public Student() {
         this(-1, "",0);
@@ -69,6 +69,13 @@ public class Student {
         Student that = (Student) obj;
         return this.id == that.id;
     }
+
+	@Override
+	public int compareTo(Student that) {
+		int compare=this.id-that.id;
+		return compare;
+	}
 	
 
+    
 }
