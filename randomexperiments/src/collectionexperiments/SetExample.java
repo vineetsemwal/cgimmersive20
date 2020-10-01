@@ -7,7 +7,8 @@ import randomexperiments.inheritance.Student;
 public class SetExample {
 
 	public static void main(String args[]) {
-		Set<Student>set=new HashSet<>();
+		Comparator<Student>idComparator=new StudentIdComparator();
+		Set<Student>set=new TreeSet<>(idComparator);
 		set.add(new Student(1,"shivam",21));
 		set.add(new Student(3,"shahbaz",21));
 		set.add(new Student(2,"avichal",21));
