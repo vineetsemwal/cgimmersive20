@@ -25,7 +25,13 @@ public class SetExample {
 		for(Student current:set) {
 			System.out.println(current.getId()+"-"+current.getName());
 		}
-		
+
+	   Iterator<Student>iterator=	set.iterator();
+		while (iterator.hasNext()){
+		   Student student=	iterator.next();
+			System.out.println(student.getId()+"-"+student.getName());
+
+		}
 		
 	}
 }

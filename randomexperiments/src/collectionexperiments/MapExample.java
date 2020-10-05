@@ -11,7 +11,7 @@ public class MapExample {
 		Student st1 = new Student(1, "shivam", 21);
 		map.put(3, new Student(3, "buratan", 21));
 		map.put(1, st1);
-		map.put(2, new Student(2, "buratan", 21));
+		map.put(2, new Student(2, "bhuratan", 21));
 		map.put(1, new Student(10, "harshil", 21));
 		int count = map.size();
 		System.out.println("count after adding=" + count);
@@ -30,6 +30,7 @@ public class MapExample {
 		for (Student student : values) {
 			System.out.println(student.getId() + " " + student.getName());
 		}
+
 
 	}
 

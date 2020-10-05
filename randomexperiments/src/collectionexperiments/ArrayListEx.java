@@ -12,6 +12,9 @@ public class ArrayListEx {
 		list.add("hashil");
 		list.add("swati");// element added at index 2
 		list.add("vidya");// element add at index 3
+		list.add("bharat");
+		list.add("avichal");
+		list.add("bhuratan");
 		count = list.size();
 		System.out.println("4 elements added, count =" + count);
 
@@ -24,7 +27,20 @@ public class ArrayListEx {
 
 		for (String element : list) {
 			System.out.println("element=" + element);
+			list.remove(element);
+
 		}
+
+
+
+		Iterator<String>iterator=list.iterator();
+		while (iterator.hasNext()){
+			String element=iterator.next();
+			System.out.println("element getting removed is "+element);
+			iterator.remove();
+		}
+		System.out.println("size="+list.size());
+
 
 	}
 

@@ -12,9 +12,9 @@ public class SortingExample {
 		list.add(new Student(4, "sahitya",22));
 		list.add(new Student(1, "kartikeya",20));
 		list.add(new Student(3, "tushar",19));
-		Comparator<Student> comparator = new StudentIdComparator();
-		list.sort(comparator);
-	//	Collections.sort(list);
+	//	Comparator<Student> comparator = new StudentIdComparator();
+	//	list.sort(comparator);
+	   Collections.sort(list);
 		for (Student student : list) {
 			System.out.println(student.getId() + "-" + student.getName()+"-"+student.getAge());
 		}
