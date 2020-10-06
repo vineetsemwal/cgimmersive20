@@ -1,6 +1,7 @@
 package ioex;
 
 import java.io.*;
+import java.util.List;
 
 public class ReadState {
     public static void main(String args[]){
@@ -14,8 +15,10 @@ public class ReadState {
                  ObjectInputStream oin=new ObjectInputStream(inputStream);
                  ){
             Object object =oin.readObject();
-            Customer customer=(Customer)object;
-            System.out.println("saved customer fetched back="+customer.getId()+"-"+customer.getName());
+            List<Customer> list=(List)object;//since we serialized arraylist
+            for (Customer customer:list) {
+                System.out.println("saved customer fetched back=" + customer.getId() + "-" + customer.getName());
+            }
          }
          catch (IOException e){
              e.printStackTrace();
