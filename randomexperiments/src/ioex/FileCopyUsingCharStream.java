@@ -12,15 +12,11 @@ public class FileCopyUsingCharStream {
     }
 
     void readWrite(File inputFile, File outFile) {
-        InputStream inputStream = null;
         InputStreamReader reader = null;
-        OutputStream outputStream = null;
         OutputStreamWriter writer = null;
         try {
-            inputStream = new FileInputStream(inputFile);
-            outputStream = new FileOutputStream(outFile);
-            reader = new InputStreamReader(inputStream);// reader wraps/use inputstream
-            writer = new OutputStreamWriter(outputStream);//writer wraps/use outputstream
+            reader = new FileReader(inputFile);// reader wraps/use inputstream
+            writer = new FileWriter(outFile);//writer wraps/use outputstream
             int readCharacter;// will contain the character which we will read
             while ((readCharacter = reader.read()) > 0) {
                 writer.write(readCharacter);
@@ -30,9 +26,7 @@ public class FileCopyUsingCharStream {
             e.printStackTrace();
         } finally {
             close(reader);
-            close(inputStream);
             close(writer);
-            close(outputStream);
         }
 
     }
