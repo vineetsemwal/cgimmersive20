@@ -29,6 +29,7 @@ public class FileCopyUsingCharStreamLinewise {
             String readLine;
             while ((readLine=bufferedReader.readLine())!=null) {
                 bufferedWriter.write(readLine);
+                bufferedWriter.newLine();//writes line separator (end of line character)
                 linesCount++;
                 System.out.println("line found="+readLine);
             }
