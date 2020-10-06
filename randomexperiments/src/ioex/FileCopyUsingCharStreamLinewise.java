@@ -37,8 +37,10 @@ public class FileCopyUsingCharStreamLinewise {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+            close(bufferedReader);
             close(reader);
             close(inputStream);
+            close(bufferedWriter);
             close(writer);
             close(outputStream);
         }
