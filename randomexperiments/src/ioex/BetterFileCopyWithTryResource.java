@@ -34,19 +34,4 @@ public class BetterFileCopyWithTryResource {
         }
     }
 
-    void close(InputStream stream) {
-        try {
-            stream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    void close(OutputStream stream) {
-        try {
-            stream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

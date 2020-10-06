@@ -29,36 +29,4 @@ public class FileCopyUsingCharStreamWithTryResource {
     }
 
 
-    void close(InputStream stream){
-        try{
-            stream.close();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    void close(OutputStream stream){
-        try{
-            stream.close();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-    void close(Reader reader) {
-        try {
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    void close(Writer writer) {
-        try {
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 }

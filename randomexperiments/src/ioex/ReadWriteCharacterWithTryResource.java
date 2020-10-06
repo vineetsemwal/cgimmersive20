@@ -28,21 +28,5 @@ public class ReadWriteCharacterWithTryResource {
 
     }
 
-    void close(Reader reader) {
-        try {
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    void close(Writer writer) {
-        try {
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 
 }
