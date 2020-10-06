@@ -14,8 +14,9 @@ public class ThreadExample {
             child2.start();
             child3.start();
             child4.start();
+            Thread mainThread=Thread.currentThread();
             for (int i = 0; i < 5; i++) {
-                System.out.println("main thread i=" + i);
+                System.out.println("==>"+mainThread.getName() +" i="+ i);
                 Thread.sleep(10);
             }
             System.out.println("*****checking before join");
