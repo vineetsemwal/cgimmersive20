@@ -12,18 +12,14 @@ public class FileCopyUsingCharStreamLinewise {
     }
 
     void readWrite(File inputFile, File outFile) {
-        InputStream inputStream = null;
         InputStreamReader reader = null;
-        OutputStream outputStream = null;
         OutputStreamWriter writer = null;
         BufferedReader bufferedReader=null;
         BufferedWriter bufferedWriter=null;
         try {
-            inputStream = new FileInputStream(inputFile);
-            outputStream = new FileOutputStream(outFile);
-            reader = new InputStreamReader(inputStream);// reader wraps/use inputstream
+            reader = new FileReader(inputFile);// reader wraps/use inputstream
             bufferedReader=new BufferedReader(reader);
-            writer = new OutputStreamWriter(outputStream);//writer wraps/use outputstream
+            writer = new FileWriter(outFile);//writer wraps/use outputstream
             bufferedWriter=new BufferedWriter(writer);
             int linesCount=0;// will contain the character which we will read
             String readLine;
@@ -40,10 +36,8 @@ public class FileCopyUsingCharStreamLinewise {
         } finally {
             close(bufferedReader);
             close(reader);
-            close(inputStream);
             close(bufferedWriter);
             close(writer);
-            close(outputStream);
         }
 
     }
