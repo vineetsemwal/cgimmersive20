@@ -29,6 +29,7 @@ public class BetterFileCopy {
                 bout.write(data,0,readBytesCount);
                totalBytescount=totalBytescount+readBytesCount;
             }
+
             System.out.println("no of bytes written="+totalBytescount);
         } catch (IOException e) {
             e.printStackTrace();

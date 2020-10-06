@@ -19,7 +19,7 @@ public class FileCopy {
             int count=0;
             fin = new FileInputStream(input);
             fos = new FileOutputStream(output);
-            int readByte;
+            int readByte;// will contain the byte which we will read
             while ((readByte = fin.read()) > 0) {
                 fos.write(readByte);
                 count++;
