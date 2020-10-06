@@ -1,16 +1,17 @@
 package mt;
 
-public class ChildThread extends Thread{
+public class ImplementRunnableChild implements Runnable{
 
-    public ChildThread(String threadName){
-        super(threadName);
+    private String name;
+
+    public ImplementRunnableChild(String name){
+        this.name=name;
     }
 
     @Override
     public void  run(){
         try {
             for (int i = 0; i < 5; i++) {
-                String name = getName();
                 System.out.println(name + " i=" + i);
                 Thread.sleep(1000);
             }
