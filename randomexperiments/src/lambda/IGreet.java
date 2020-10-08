@@ -1,6 +1,6 @@
 package lambda;
 
-public interface IConsumer {
+public interface IGreet {
 
     void greet(String msg);
 }

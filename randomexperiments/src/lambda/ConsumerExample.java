@@ -3,7 +3,7 @@ package lambda;
 public class ConsumerExample {
 
     public static void main(String args[]){
-        IConsumer consumer=new IConsumer() {
+        IGreet consumer=new IGreet() {
             @Override
             public void greet(String msg) {
              System.out.println(msg);
