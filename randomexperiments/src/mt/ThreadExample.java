@@ -28,8 +28,8 @@ public class ThreadExample {
             System.out.println("child 2 alive="+child2.isAlive());
             System.out.println("child 3 alive="+child3.isAlive());
             System.out.println("child 4 alive="+child4.isAlive());
-            child1.join();
-            child2.join();
+            child1.join();//blocking method
+            child2.join();//blocking method
             child3.join();
             child4.join();
             System.out.println("*****checking after join");

@@ -2,7 +2,7 @@ package mt;
 
 public class BracketAdder {
 
-  synchronized void add(){
+   synchronized void add(){
           try {
               System.out.print("(");
               System.out.print("hello");

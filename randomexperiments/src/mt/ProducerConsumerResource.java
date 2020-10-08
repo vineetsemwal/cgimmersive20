@@ -9,8 +9,8 @@ public class ProducerConsumerResource {
            if(isProduced){
                wait();
            }
-           i++;
            Thread.sleep(1000);
+           i++;
            System.out.println("produce " + i);
            isProduced=true;
            notify();
