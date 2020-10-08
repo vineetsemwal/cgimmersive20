@@ -10,6 +10,7 @@ public class AnonymousExample {
             public int add(int a, int b) {
                 return a+b;
             }
+
         };
        int result= calculator.add(1,2);
        System.out.println("result="+result);
