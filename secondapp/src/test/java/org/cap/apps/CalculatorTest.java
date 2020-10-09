@@ -3,6 +3,15 @@ package org.cap.apps;
 import org.junit.jupiter.api.*;
 
 public class CalculatorTest {
+	
+	Calculator calculator;
+
+	
+	@BeforeEach
+	public void setup() {
+		System.out.println("inside setup");
+		calculator=new Calculator();
+	}
 
 	/**
 	 * inputs are 5,7
@@ -10,7 +19,7 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testAdd_1() {
-		Calculator calculator=new Calculator();
+		System.out.println("inside testAdd_1");
 		int result=calculator.add(5, 7);
 	    Assertions.assertEquals(12, result);
 	}
@@ -21,7 +30,7 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testAdd_2() {
-		Calculator calculator=new Calculator();
+		System.out.println("inside testAdd_2");
 		int result=calculator.add(-3, -5);
 	    Assertions.assertEquals(-8, result);
 	}
