@@ -1,5 +1,8 @@
 package lambda;
 
+/**
+ * consumer example
+ */
 @FunctionalInterface
 public interface IGreet {
 

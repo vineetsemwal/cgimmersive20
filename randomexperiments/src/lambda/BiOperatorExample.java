@@ -3,6 +3,7 @@ package lambda;
 public class BiOperatorExample {
 
     public static void main(String args[]){
+
         IAdd expression=(num1,num2)->num1+num2;
         IAdd block=(num1, num2) -> {
             return num1+num2;

@@ -14,12 +14,12 @@ public class ProduceExample {
         // lambda expression
         IProduces produces2=()->"welcome to cg immersive training, using lambda expression";
 
-        //lamda block
+        //lambda block
         IProduces produces3=()->{
           String msg="welcome to cg immersive training, using lambda block";
           return msg;
         };
-
+        System.out.println("we have only created lambdas but we have not executed them");
         String anoymousMsg=produces1.produce();
         String expressionMsg=produces2.produce();
         String blockMsg=produces3.produce();

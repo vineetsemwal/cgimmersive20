@@ -1,5 +1,8 @@
 package lambda;
 
+/**
+ * Bi Function
+ */
 @FunctionalInterface
 public interface IConcatTimesFun {
 

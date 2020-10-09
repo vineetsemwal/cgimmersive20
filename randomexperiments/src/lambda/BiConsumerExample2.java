@@ -1,5 +1,8 @@
 package lambda;
 
+/**
+ * bi consumer
+ */
 public class BiConsumerExample2 {
 
     public static void main(String args[]){
