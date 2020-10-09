@@ -6,11 +6,22 @@ public class CalculatorTest {
 	
 	Calculator calculator;
 
+	@BeforeAll
+	public static void beforeAll() {
+		System.out.println("inside beforeall");
+	}
+	
 	
 	@BeforeEach
 	public void setup() {
 		System.out.println("inside setup");
 		calculator=new Calculator();
+	}
+	
+	@AfterEach
+	public void teardown() {
+		System.out.println("inside teardown");
+	
 	}
 
 	/**
