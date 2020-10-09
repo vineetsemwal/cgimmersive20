@@ -15,7 +15,7 @@ public class MapOperationExample {
        numberStream.forEach(consumer);
        */
         //in one line
-        stream.map(e->e.length()).forEach(System.out::println);
+        stream.map(e->e.length()).skip(2).forEach(System.out::println);
 
     }
 
