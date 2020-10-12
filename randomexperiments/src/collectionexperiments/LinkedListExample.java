@@ -35,9 +35,9 @@ public class LinkedListExample {
         display(list);
 
         System.out.println("after using offer");
-        //add element at the end
+        //add element at the end which add(e) does too
         list.offer(40);
-        //adds element at the start
+        //adds element at the start, same as addFirst(e)
          list.offerFirst(50);
 
          display(list);
