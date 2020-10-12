@@ -4,8 +4,9 @@ import java.util.*;
 
 public class ArrayListEx {
 
+
 	public static void main(String args[]) {
-		List<String> list = new LinkedList<>();
+		List<String> list = new ArrayList<>();
 		int count = list.size();
 		System.out.println("intial elements count =" + count);
 		list.add("shivam");
