@@ -10,7 +10,7 @@ public class SessionBreakMain {
         SessionBreak morning1=SessionBreak.MORNING_TEA;
         SessionBreak morning2=SessionBreak.MORNING_TEA;
         if(morning1==morning2){
-
+          System.out.println("same object");
         }
 
 
