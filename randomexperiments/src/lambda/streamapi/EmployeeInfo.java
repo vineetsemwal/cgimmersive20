@@ -13,15 +13,15 @@ public class EmployeeInfo {
         emps.add(new Employee("Timmy", 50000));
         emps.add(new Employee("Annny", 40000));
 
-       List<Employee>bySalary= info.sort(emps, SortMethod.BYSALARY);
-       System.out.println("by salary");
-       bySalary.stream().forEach(employee->System.out.println("name="+employee.getName() +" salary="+employee.getSalary()));
-       System.out.println("by name");
-       List<Employee>byNames=info.sort(emps,SortMethod.BYNAME);
-       byNames.stream().forEach(employee->System.out.println("name="+employee.getName() +" salary="+employee.getSalary()));
+        List<Employee> bySalary = info.sort(emps, SortMethod.BYSALARY);
+        System.out.println("by salary");
+        bySalary.stream().forEach(employee -> System.out.println("name=" + employee.getName() + " salary=" + employee.getSalary()));
+        System.out.println("by name");
+        List<Employee> byNames = info.sort(emps, SortMethod.BYNAME);
+        byNames.stream().forEach(employee -> System.out.println("name=" + employee.getName() + " salary=" + employee.getSalary()));
 
-       boolean isCharPresent=info.isCharacterPresentInAllNames(bySalary,"A");
-       System.out.println("char present="+isCharPresent);
+        boolean isCharPresent = info.isCharacterPresentInAllNames(bySalary, "A");
+        System.out.println("char present=" + isCharPresent);
     }
 
     enum SortMethod {
