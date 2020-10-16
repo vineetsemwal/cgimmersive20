@@ -10,7 +10,10 @@ public class Employee {
     @GeneratedValue
     @Id
     private Integer id;
+
+    @Column(nullable = false,name = "ename")
     private String name;
+
     private Double balance;
 
     public Employee() {

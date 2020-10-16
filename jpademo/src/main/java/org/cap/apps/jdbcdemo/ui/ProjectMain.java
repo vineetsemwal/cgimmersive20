@@ -3,6 +3,8 @@ package org.cap.apps.jdbcdemo.ui;
 import org.cap.apps.jdbcdemo.entities.Employee;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * 1) Get Entity manager factory
@@ -24,7 +26,7 @@ public class ProjectMain {
     public void execute() {
         Employee employee1 = new Employee("bharat", 200.0);
         Employee employee2 = new Employee("tushar", 200.0);
-        System.out.println("objects arte in new/transient state");
+        System.out.println("objects are in new/transient state");
         display(employee1);
         display(employee2);
 
@@ -52,6 +54,10 @@ public class ProjectMain {
         employee1 = update(employee1);
         System.out.println("**after update**");
         display(employee1);
+        System.out.println("*********find employees by name");
+        List<Employee>list=findEmployeesByName("saibharat");
+        displayEmployees(list);
+        remove(employee1);
 
         emf.close();
     }
@@ -81,6 +87,7 @@ public class ProjectMain {
         EntityManager entityManager = emf.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
+        employee=entityManager.find(Employee.class,employee.getId());
         entityManager.remove(employee);
         transaction.commit();
         entityManager.close();
@@ -92,8 +99,25 @@ public class ProjectMain {
         return employee;
     }
 
+    public List<Employee>findEmployeesByName(String name){
+        String jpaql="from Employee where name=:pname";
+        EntityManager entityManager= emf.createEntityManager();
+        TypedQuery<Employee> query=entityManager.createQuery(jpaql,Employee.class);
+        query.setParameter("pname",name);
+        List<Employee>list= query.getResultList();
+        entityManager.close();
+        return list;
+
+    }
+
     public void display(Employee employee) {
         System.out.println("id=" + employee.getId() + " name=" + employee.getName() + " balance=" + employee.getBalance());
+    }
+
+    public void displayEmployees(Collection<Employee>employees){
+        for (Employee employee:employees){
+            display(employee);
+        }
     }
 
 }
