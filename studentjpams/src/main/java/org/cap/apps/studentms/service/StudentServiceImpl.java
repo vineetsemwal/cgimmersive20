@@ -47,4 +47,12 @@ public class StudentServiceImpl implements IStudentService {
         transaction.commit();
     }
 
+    @Override
+    public Student update(Student student) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        student=dao.update(student);
+        transaction.commit();
+        return student;
+    }
 }

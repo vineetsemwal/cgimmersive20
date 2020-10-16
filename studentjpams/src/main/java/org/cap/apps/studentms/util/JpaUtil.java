@@ -15,11 +15,11 @@ public class JpaUtil {
 
     private Set<EntityManager> entityManagers = new HashSet<>();
 
-    private JpaUtil(){
+    private JpaUtil() {
 
     }
 
-    private static JpaUtil instance =new JpaUtil();
+    private static JpaUtil instance = new JpaUtil();
 
     public static JpaUtil getInstance() {
         return instance;

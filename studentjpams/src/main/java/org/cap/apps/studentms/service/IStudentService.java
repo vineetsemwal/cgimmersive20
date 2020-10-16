@@ -8,5 +8,7 @@ public interface IStudentService {
 	
 	Student findById(Integer id);
 	
-	void deleteById(Integer id);	
+	void deleteById(Integer id);
+
+	Student update(Student student);
 }

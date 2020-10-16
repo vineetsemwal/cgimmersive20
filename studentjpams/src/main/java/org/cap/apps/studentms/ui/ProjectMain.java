@@ -27,6 +27,7 @@ public class ProjectMain {
             System.out.println(e.getMessage());
 
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("something went wrong");
         }
 
