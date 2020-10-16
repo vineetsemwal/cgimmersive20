@@ -17,7 +17,7 @@ public class ProjectUi {
 		displayUserById(id1);
 		displayUserById(id2);
 
-		update(id1,"avichal saxena",21);
+		update(23,"avichal saxena",21);
 		displayUserById(id1);
 		this.removeStudentById(id3);
 

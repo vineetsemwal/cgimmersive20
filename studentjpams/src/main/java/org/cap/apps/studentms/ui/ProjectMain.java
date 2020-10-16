@@ -24,6 +24,7 @@ public class ProjectMain {
         } catch (InvalidStudentNameException e) {
             System.out.println(e.getMessage());
         } catch (StudentNotFoundException e) {
+            e.printStackTrace();
             System.out.println(e.getMessage());
 
         } catch (Exception e) {
