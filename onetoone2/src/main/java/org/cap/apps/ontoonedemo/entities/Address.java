@@ -1,4 +1,4 @@
-package org.cap.apps.jdbcdemo.entities;
+package org.cap.apps.ontoonedemo.entities;
 
 import javax.persistence.*;
 

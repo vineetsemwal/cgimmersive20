@@ -1,11 +1,9 @@
-package org.cap.apps.jdbcdemo.ui;
+package org.cap.apps.ontoonedemo.ui;
 
-import org.cap.apps.jdbcdemo.entities.Address;
-import org.cap.apps.jdbcdemo.entities.Student;
+import org.cap.apps.ontoonedemo.entities.Address;
+import org.cap.apps.ontoonedemo.entities.Student;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.List;
 
 /**
  * 1) Get Entity manager factory
