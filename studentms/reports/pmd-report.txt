@@ -1,0 +1,334 @@
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:10:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:10:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:16:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:16:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:23:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:23:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:23:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:23:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:25:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:25:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:25:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/IStudentDao.java:25:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:8:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:8:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:8:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:8:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	ImmutableField: Private field 'store' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	ImmutableField: Private field 'store' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	UseConcurrentHashMap: If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:10:	UseConcurrentHashMap: If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:12:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:12:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:12:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:12:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:14:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the generateId method if you want a default access modifier
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:14:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the generateId method if you want a default access modifier
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:14:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:14:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:20:	MethodArgumentCouldBeFinal: Parameter 'student' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:20:	MethodArgumentCouldBeFinal: Parameter 'student' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:21:	LocalVariableCouldBeFinal: Local variable 'id' could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:21:	LocalVariableCouldBeFinal: Local variable 'id' could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:21:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:21:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:28:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:28:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:28:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:28:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:30:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:30:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:31:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'student'
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:31:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'student'
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:35:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:35:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:35:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:35:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:40:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:40:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:40:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:40:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:40:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:40:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:41:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/dao/StudentDaoImpl.java:41:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:5:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:5:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:5:	DataClass: The class 'Student' is suspected to be a Data Class (WOC=20.000%, NOPA=0, NOAM=6, WMC=13)
+src/main/java/org/cap/apps/studentms/entities/Student.java:5:	DataClass: The class 'Student' is suspected to be a Data Class (WOC=20.000%, NOPA=0, NOAM=6, WMC=13)
+src/main/java/org/cap/apps/studentms/entities/Student.java:7:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:7:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:7:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/entities/Student.java:7:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/entities/Student.java:9:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:9:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:11:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:11:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:13:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:13:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:13:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/entities/Student.java:13:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/entities/Student.java:17:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:17:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/entities/Student.java:17:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:17:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:17:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:17:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/entities/Student.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/entities/Student.java:35:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:35:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:45:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:45:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:51:	LocalVariableCouldBeFinal: Local variable 'hash' could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:51:	LocalVariableCouldBeFinal: Local variable 'hash' could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:52:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'hash'
+src/main/java/org/cap/apps/studentms/entities/Student.java:52:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'hash'
+src/main/java/org/cap/apps/studentms/entities/Student.java:56:	MethodArgumentCouldBeFinal: Parameter 'obj' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:56:	MethodArgumentCouldBeFinal: Parameter 'obj' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:57:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:57:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:58:	ControlStatementBraces: This statement should have braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:58:	ControlStatementBraces: This statement should have braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:58:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/org/cap/apps/studentms/entities/Student.java:58:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/org/cap/apps/studentms/entities/Student.java:59:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:59:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:60:	ControlStatementBraces: This statement should have braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:60:	ControlStatementBraces: This statement should have braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:60:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/org/cap/apps/studentms/entities/Student.java:60:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/org/cap/apps/studentms/entities/Student.java:61:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:61:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:62:	ControlStatementBraces: This statement should have braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:62:	ControlStatementBraces: This statement should have braces
+src/main/java/org/cap/apps/studentms/entities/Student.java:62:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/org/cap/apps/studentms/entities/Student.java:62:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/org/cap/apps/studentms/entities/Student.java:63:	LocalVariableCouldBeFinal: Local variable 'that' could be declared final
+src/main/java/org/cap/apps/studentms/entities/Student.java:63:	LocalVariableCouldBeFinal: Local variable 'that' could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:9:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/InvalidAgeException.java:9:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:9:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/InvalidArgumentException.java:9:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:8:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:8:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:8:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/InvalidStudentNameException.java:8:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:3:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:3:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:5:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:5:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:5:	UncommentedEmptyConstructor: Document empty constructor
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:9:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/exceptions/StudentNotFoundException.java:9:	MethodArgumentCouldBeFinal: Parameter 'msg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:5:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:5:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:7:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:7:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:9:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:9:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:9:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:11:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:11:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:11:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/IStudentService.java:11:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:7:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:7:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:9:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:9:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:9:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:9:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:9:	ImmutableField: Private field 'dao' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:9:	ImmutableField: Private field 'dao' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:12:	AvoidReassigningParameters: Avoid reassigning parameters such as 'student'
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:12:	AvoidReassigningParameters: Avoid reassigning parameters such as 'student'
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:23:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:23:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:23:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:23:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:24:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:24:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:25:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'student'
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:25:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'student'
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:29:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:29:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:29:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/service/StudentServiceImpl.java:29:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:3:	UnusedImports: Avoid unused imports such as 'org.cap.apps.studentms.entities'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:3:	UnusedImports: Avoid unused imports such as 'org.cap.apps.studentms.entities'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:4:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.InvalidAgeException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:4:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.InvalidAgeException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:5:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.InvalidArgumentException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:5:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.InvalidArgumentException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:6:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.InvalidStudentNameException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:6:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.InvalidStudentNameException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:7:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.StudentNotFoundException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:7:	DuplicateImports: Avoid duplicate imports such as 'org.cap.apps.studentms.exceptions.StudentNotFoundException'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:8:	UnusedImports: Avoid unused imports such as 'org.cap.apps.studentms.service'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:8:	UnusedImports: Avoid unused imports such as 'org.cap.apps.studentms.service'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:9:	UnusedImports: Avoid unused imports such as 'org.cap.apps.studentms.exceptions'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:9:	UnusedImports: Avoid unused imports such as 'org.cap.apps.studentms.exceptions'
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:11:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:11:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:11:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:11:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:13:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:13:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:13:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:13:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:15:	LocalVariableCouldBeFinal: Local variable 'ui' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:15:	LocalVariableCouldBeFinal: Local variable 'ui' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:15:	ShortVariable: Avoid variables with short names like ui
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:15:	ShortVariable: Avoid variables with short names like ui
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:19:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:19:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:20:	IdenticalCatchBranches: 'catch' branch identical to 'InvalidAgeException' branch
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:20:	IdenticalCatchBranches: 'catch' branch identical to 'InvalidAgeException' branch
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:21:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:21:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:22:	IdenticalCatchBranches: 'catch' branch identical to 'InvalidAgeException' branch
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:22:	IdenticalCatchBranches: 'catch' branch identical to 'InvalidAgeException' branch
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:23:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:23:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:24:	IdenticalCatchBranches: 'catch' branch identical to 'InvalidAgeException' branch
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:24:	IdenticalCatchBranches: 'catch' branch identical to 'InvalidAgeException' branch
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:25:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:25:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:28:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:28:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:29:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectMain.java:29:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:7:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:7:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:8:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:8:	CommentRequired: Field comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:8:	ImmutableField: Private field 'service' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:8:	ImmutableField: Private field 'service' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:10:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:10:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:11:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:11:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:12:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:12:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:12:	LocalVariableCouldBeFinal: Local variable 'id1' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:12:	LocalVariableCouldBeFinal: Local variable 'id1' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:13:	LocalVariableCouldBeFinal: Local variable 'student2' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:13:	LocalVariableCouldBeFinal: Local variable 'student2' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:14:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:14:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:14:	LocalVariableCouldBeFinal: Local variable 'id2' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:14:	LocalVariableCouldBeFinal: Local variable 'id2' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:15:	LocalVariableCouldBeFinal: Local variable 'student3' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:15:	LocalVariableCouldBeFinal: Local variable 'student3' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:16:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:16:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:16:	LocalVariableCouldBeFinal: Local variable 'id3' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:16:	LocalVariableCouldBeFinal: Local variable 'id3' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:23:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:23:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:23:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:23:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:23:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:23:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:26:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:26:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:26:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:26:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:26:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:26:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:27:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:27:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:31:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:31:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:31:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:31:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:31:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:31:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:32:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:32:	LocalVariableCouldBeFinal: Local variable 'student' could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:33:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:33:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:33:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:33:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:33:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:33:	SystemPrintln: System.out.println is used
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:34:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:34:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:38:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:38:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:38:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:38:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:38:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/ui/ProjectUi.java:38:	ShortVariable: Avoid variables with short names like id
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:5:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:5:	CommentRequired: Class comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:5:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:5:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:7:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:7:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:7:	MethodArgumentCouldBeFinal: Parameter 'arg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:7:	MethodArgumentCouldBeFinal: Parameter 'arg' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:13:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:13:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:13:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:13:	MethodArgumentCouldBeFinal: Parameter 'name' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:20:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:20:	CommentRequired: Public method and constructor comments are required
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:20:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:20:	MethodArgumentCouldBeFinal: Parameter 'age' is not assigned and could be declared final
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:24:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/org/cap/apps/studentms/util/ValidationUtil.java:24:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
