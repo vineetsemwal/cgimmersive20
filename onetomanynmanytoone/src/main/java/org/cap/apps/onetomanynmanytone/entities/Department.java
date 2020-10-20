@@ -1,6 +1,7 @@
 package org.cap.apps.onetomanynmanytone.entities;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -15,7 +16,7 @@ public class Department {
     private String deptName;
 
     @OneToMany(mappedBy = "department")
-    private Set<Employee>employees;
+    private List<Employee> employees;
 
     public Department(){
 
@@ -41,11 +42,11 @@ public class Department {
         this.deptName = deptName;
     }
 
-    public Set<Employee> getEmployees() {
+    public List<Employee> getEmployees() {
         return employees;
     }
 
-    public void setEmployees(Set<Employee> employees) {
+    public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 

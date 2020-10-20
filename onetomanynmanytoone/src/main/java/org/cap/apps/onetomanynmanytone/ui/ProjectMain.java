@@ -4,7 +4,9 @@ import org.cap.apps.onetomanynmanytone.entities.Department;
 import org.cap.apps.onetomanynmanytone.entities.Employee;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -48,7 +50,7 @@ public class ProjectMain {
         Department fetchedDepartment = entityManager.find(Department.class, devId);
         System.out.println("fetched department=" + fetchedDepartment.getId() + " " + fetchedDepartment.getDeptName());
 
-        Set<Employee> employees = fetchedDepartment.getEmployees();
+        List<Employee> employees = fetchedDepartment.getEmployees();
         for (Employee employee : employees) {
             System.out.println(employee.getId() + " " + employee.getName());
         }
@@ -63,9 +65,9 @@ public class ProjectMain {
     public Employee addEmployee(Employee employee) {
         entityManager.persist(employee);
         Department department = employee.getDepartment();
-        Set<Employee> devEmployees = department.getEmployees();
+        List<Employee> devEmployees = department.getEmployees();
         if (devEmployees == null) {
-            devEmployees = new HashSet<>();
+            devEmployees = new ArrayList<>();
             department.setEmployees(devEmployees);
         }
         devEmployees.add(employee);
