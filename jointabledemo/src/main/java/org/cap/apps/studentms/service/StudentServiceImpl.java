@@ -20,11 +20,6 @@ public class StudentServiceImpl implements IStudentService {
         dao = new StudentDaoImpl(entityManager);
     }
 
-    public StudentServiceImpl(EntityManager entityManager) {
-        this.entityManager=entityManager;
-        dao = new StudentDaoImpl(entityManager);
-    }
-
     @Override
     public Student save(Student student) {
         ValidationUtil.checkArgumentNotNull(student);

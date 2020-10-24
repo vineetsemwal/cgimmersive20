@@ -13,7 +13,7 @@ public class JpaUtil {
 
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("schoolms");
 
-    private EntityManager entityManager;
+    private Set<EntityManager> entityManagers = new HashSet<>();
 
     private JpaUtil() {
 
@@ -26,12 +26,15 @@ public class JpaUtil {
     }
 
     public EntityManager getEntityManager() {
-        entityManager = emf.createEntityManager();
+        EntityManager entityManager = emf.createEntityManager();
+        entityManagers.add(entityManager);
         return entityManager;
     }
 
     public void close() {
-        entityManager.close();
+        for (EntityManager manager : entityManagers) {
+            manager.close();
+        }
         emf.close();
     }
 

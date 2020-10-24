@@ -1,5 +1,6 @@
 package org.cap.apps.studentms.service;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
 
@@ -8,11 +9,12 @@ import javax.persistence.*;
 import org.cap.apps.studentms.entities.Student;
 import org.cap.apps.studentms.exceptions.InvalidStudentNameException;
 import org.cap.apps.studentms.exceptions.StudentNotFoundException;
+import org.cap.apps.studentms.util.JpaUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.function.Executable;
 import org.junit.jupiter.api.*;
 
-public class StudentServiceImplTest {
+class StudentServiceImplTest {
 	
 	StudentServiceImpl service;
 	
@@ -20,12 +22,20 @@ public class StudentServiceImplTest {
 	
 	@BeforeEach
 	public void setup() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("schoolms");
-		entityManager=emf.createEntityManager();
-		service=new StudentServiceImpl(entityManager);
-
+		service=new StudentServiceImpl();
+		JpaUtil jpaUtil=JpaUtil.getInstance();
+		entityManager=jpaUtil.getEntityManager();
 	}
 	
+	
+	@AfterEach
+	public void clear() {
+	EntityTransaction transaction=entityManager.getTransaction();	
+	transaction.begin();
+	Query query=	entityManager.createQuery("delete from Student");
+	query.executeUpdate();	
+	transaction.commit();
+	}
 
 	/**
 	 * scenario student was saved successfully
@@ -94,7 +104,10 @@ public class StudentServiceImplTest {
 		String name="bhuratan";
 		int age=21;
 		Student student=new Student(name,age);
-		entityManager.persist(student);
+		EntityTransaction transaction=entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(student);	
+		transaction.commit();
 		Integer id=student.getId();
 		Student actual=service.findById(id);
 		Assertions.assertEquals(id, actual.getId());

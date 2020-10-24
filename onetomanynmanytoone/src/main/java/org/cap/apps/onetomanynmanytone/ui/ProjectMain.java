@@ -1,13 +1,10 @@
 package org.cap.apps.onetomanynmanytone.ui;
 
-import org.cap.apps.onetomanynmanytone.entities.Department;
-import org.cap.apps.onetomanynmanytone.entities.Employee;
+import org.cap.apps.onetomanynmanytone.entities.Order;
+import org.cap.apps.onetomanynmanytone.entities.Product;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 1) Get Entity manager factory
@@ -31,47 +28,33 @@ public class ProjectMain {
         entityManager = emf.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        Department dev = new Department("dev");
-        entityManager.persist(dev);
-        int devId = dev.getId();
-        Department test = new Department("test");
-        entityManager.persist(test);
 
-        Employee employee1 = new Employee("tushar", dev);
-        addEmployee(employee1);
-        Employee employee2 = new Employee("mahim", dev);
-        addEmployee(employee2);
+        Product product1=new Product();
+        entityManager.persist(product1);
+        Product product2=new Product();
+        entityManager.persist(product2);
 
-        Employee employee3 = new Employee("shreya", test);
-        addEmployee(employee3);
-        transaction.commit();
+        Order order=new Order();
+        Map<Product,Integer>products=new HashMap<>();
+        products.put(product1,3);
+        products.put(product2,2);
+        order.setProducts(products);
+        entityManager.persist(order);
+         transaction.commit();
 
-        System.out.println("fetch all employees in department");
-        Department fetchedDepartment = entityManager.find(Department.class, devId);
-        System.out.println("fetched department=" + fetchedDepartment.getId() + " " + fetchedDepartment.getDeptName());
-
-        List<Employee> employees = fetchedDepartment.getEmployees();
-        for (Employee employee : employees) {
-            System.out.println(employee.getId() + " " + employee.getName());
+         System.out.println("order details");
+        Order fetchedOrder=entityManager.find(Order.class,order.getId());
+        System.out.println("order id="+order.getId());
+        Map<Product,Integer>fetchedProducts= fetchedOrder.getProducts();
+        Set<Product> keys= fetchedProducts.keySet();
+        for (Product key:keys){
+           int quantity= fetchedProducts.get(key);
+           System.out.println("product="+key.getId()+" quantity="+quantity);
         }
-
-        entityManager.close();
 
         emf.close();
 
 
-    }
-
-    public Employee addEmployee(Employee employee) {
-        entityManager.persist(employee);
-        Department department = employee.getDepartment();
-        List<Employee> devEmployees = department.getEmployees();
-        if (devEmployees == null) {
-            devEmployees = new ArrayList<>();
-            department.setEmployees(devEmployees);
-        }
-        devEmployees.add(employee);
-        return employee;
     }
 
 
