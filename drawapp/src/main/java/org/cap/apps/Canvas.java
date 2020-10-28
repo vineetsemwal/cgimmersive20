@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Canvas {
 
-
+    @Autowired
     private Shape shape ;
 
     public Canvas(){
@@ -21,7 +21,7 @@ public class Canvas {
         return shape;
     }
 
-    @Autowired
+
     public void setShape(Shape shape) {
         this.shape = shape;
     }
