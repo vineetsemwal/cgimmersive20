@@ -7,14 +7,10 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
 
 
-    <bean id="rectangle" class="org.cap.apps.Rectangle">
-        <property name="length" value="7"/>
-        <property name="breadth" value="8"/>
+    <context:component-scan base-package="org.cap.apps"/>
+    <context:annotation-config/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:shape.properties"/>
     </bean>
-
-    <bean id="canvas" class="org.cap.apps.Canvas">
-        <property name="shape" ref="rectangle"/>
-    </bean>
-
-
 </beans>
