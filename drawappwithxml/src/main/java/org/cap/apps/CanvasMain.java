@@ -2,12 +2,13 @@ package org.cap.apps;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class CanvasMain {
 
     public static void main(String args[]){
-        ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+        AbstractApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Canvas canvas=context.getBean(Canvas.class);
         Shape shape=canvas.getShape();
         System.out.println("set shape class name="+shape.getClass().getSimpleName());
@@ -19,5 +20,6 @@ public class CanvasMain {
         Shape fetchedShape2=context.getBean(Shape.class);
         boolean isFetchShapesSame=fetchedShape1==fetchedShape2;
         System.out.println("is fetched shapes same "+isFetchShapesSame);
+        context.close();
     }
 }

@@ -10,5 +10,5 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 public class JavaConfiguration {
 
-    
+
 }
