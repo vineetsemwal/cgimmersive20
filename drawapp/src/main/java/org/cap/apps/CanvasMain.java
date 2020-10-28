@@ -12,11 +12,13 @@ public class CanvasMain {
         Canvas canvas=context.getBean(Canvas.class);
         Shape shape=canvas.getShape();
         System.out.println("set shape class name="+shape.getClass().getSimpleName());
-        Shape fetchedShape=context.getBean(Shape.class);
-        System.out.println("fetched shape class name="+fetchedShape.getClass().getSimpleName());
-        boolean isSame=shape==fetchedShape;
-        System.out.println("is same="+isSame);
+        Shape fetchedShape1=context.getBean(Shape.class);
+        System.out.println("fetched shape class name="+fetchedShape1.getClass().getSimpleName());
+        boolean isFetchAndSetSame=shape==fetchedShape1;
+        System.out.println("is same="+isFetchAndSetSame);
         canvas.draw();
-
+        Shape fetchedShape2=context.getBean(Shape.class);
+        boolean isFetchShapesSame=fetchedShape1==fetchedShape2;
+        System.out.println("is fetched shapes same "+isFetchShapesSame);
     }
 }
