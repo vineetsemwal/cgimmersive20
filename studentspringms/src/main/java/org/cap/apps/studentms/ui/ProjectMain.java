@@ -12,28 +12,27 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class ProjectMain {
 
-	public static void main(String args[]) {
-		try {
-			AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
-			context.register(JavaConfiguration.class);
-			context.refresh();
-			ProjectUi projectUi=context.getBean(ProjectUi.class);
-			projectUi.runUi();
+    public static void main(String args[]) {
+        try {
+            AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+            context.register(JavaConfiguration.class);
+            context.refresh();
+            ProjectUi projectUi = context.getBean(ProjectUi.class);
+            projectUi.runUi();
 
-		} catch (InvalidAgeException e) {
-			System.out.println(e.getMessage());
-		} catch (InvalidArgumentException e) {
-			System.out.println(e.getMessage());
-		} catch (InvalidStudentNameException e) {
-			System.out.println(e.getMessage());
-		} catch (StudentNotFoundException e) {
-			System.out.println(e.getMessage());
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        } catch (InvalidArgumentException e) {
+            System.out.println(e.getMessage());
+        } catch (InvalidStudentNameException e) {
+            System.out.println(e.getMessage());
+        } catch (StudentNotFoundException e) {
+            System.out.println(e.getMessage());
 
-		}
-		catch(Exception e) {
-			System.out.println("something went wrong");
-		}
+        } catch (Exception e) {
+            System.out.println("something went wrong");
+        }
 
-	}
+    }
 
 }
