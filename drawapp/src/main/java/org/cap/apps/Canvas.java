@@ -1,6 +1,11 @@
 package org.cap.apps;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Canvas {
+
 
     private Shape shape ;
 
@@ -16,6 +21,7 @@ public class Canvas {
         return shape;
     }
 
+    @Autowired
     public void setShape(Shape shape) {
         this.shape = shape;
     }

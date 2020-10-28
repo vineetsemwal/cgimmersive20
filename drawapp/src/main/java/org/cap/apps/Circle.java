@@ -1,5 +1,8 @@
 package org.cap.apps;
 
+import org.springframework.stereotype.Component;
+
+
 public class Circle implements Shape{
 
     private double radius;
