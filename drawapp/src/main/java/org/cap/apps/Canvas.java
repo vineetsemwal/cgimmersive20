@@ -2,7 +2,23 @@ package org.cap.apps;
 
 public class Canvas {
 
-    private Shape shape = new Rectangle(5,4);
+    private Shape shape ;
+
+    public Canvas(){
+
+    }
+
+    public Canvas(Shape shape){
+        this.shape=shape;
+    }
+
+    public Shape getShape() {
+        return shape;
+    }
+
+    public void setShape(Shape shape) {
+        this.shape = shape;
+    }
 
     public void draw(){
         double shapeArea=shape.area();
