@@ -1,6 +1,6 @@
 package org.cap.apps;
 
-public class Rectangle {
+public class Rectangle implements Shape{
     private double length,breadth;
 
     public Rectangle(){
@@ -28,6 +28,7 @@ public class Rectangle {
         this.breadth = breadth;
     }
 
+    @Override
     public double area(){
         return length*breadth;
     }
