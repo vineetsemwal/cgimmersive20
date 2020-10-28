@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="rectangle" class="org.cap.apps.Rectangle">
+    <property name="length" value="7"/>
+    <property name="breadth" value="8"/>
+</bean>
+
+<bean id="canvas" class="org.cap.apps.Canvas">
+    <property name="shape" ref="rectangle"/>
+</bean>
+
+
+</beans>

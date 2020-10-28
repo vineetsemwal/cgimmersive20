@@ -5,12 +5,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Scope("prototype")
-@Component
 public class Rectangle implements Shape{
-    @Value("${rectangle.length}")
     private double length;
-    @Value("${rectangle.breadth}")
     private double breadth;
 
     public Rectangle(){
