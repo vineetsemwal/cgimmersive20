@@ -19,7 +19,7 @@ public class ProjectMain {
             context.refresh();
             ProjectUi projectUi = context.getBean(ProjectUi.class);
             projectUi.runUi();
-
+            context.close();
         } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
         } catch (InvalidArgumentException e) {
