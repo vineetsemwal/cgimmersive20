@@ -1,11 +1,15 @@
 package org.cap.apps;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-
+@Component
 public class Rectangle implements Shape{
-    private double length,breadth;
+    @Value("${rectangle.length}")
+    private double length;
+    @Value("${rectangle.breadth}")
+    private double breadth;
 
     public Rectangle(){
 
