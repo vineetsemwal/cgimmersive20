@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Scope("prototype")
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
 public class Rectangle implements Shape{
     @Value("${rectangle.length}")
@@ -36,6 +38,16 @@ public class Rectangle implements Shape{
 
     public void setBreadth(double breadth) {
         this.breadth = breadth;
+    }
+
+    @PostConstruct
+    public void afterInitialize(){
+        System.out.println("inside Rectangle afterInitialize length="+length+" breadth="+breadth);
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("isnide Rectangle's destroy");
     }
 
     @Override

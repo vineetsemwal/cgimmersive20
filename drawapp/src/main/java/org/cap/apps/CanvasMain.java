@@ -20,6 +20,6 @@ public class CanvasMain {
         Shape fetchedShape2=context.getBean(Shape.class);
         boolean isFetchShapesSame=fetchedShape1==fetchedShape2;
         System.out.println("is fetched shapes same "+isFetchShapesSame);
-        context.close();
+       context.close();
     }
 }
