@@ -14,6 +14,8 @@ public class CanvasMain {
         System.out.println("set shape class name="+shape.getClass().getSimpleName());
         Shape fetchedShape=context.getBean(Shape.class);
         System.out.println("fetched shape class name="+fetchedShape.getClass().getSimpleName());
+        boolean isSame=shape==fetchedShape;
+        System.out.println("is same="+isSame);
         canvas.draw();
 
     }
