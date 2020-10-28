@@ -3,10 +3,11 @@ package org.cap.apps.studentms.dao;
 import org.cap.apps.studentms.entities.Student;
 import org.cap.apps.studentms.exceptions.*;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Component
+@Repository
 public class StudentDaoImpl implements IStudentDao {
 
 	private Map<Integer, Student> store = new HashMap<>();

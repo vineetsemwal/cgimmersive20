@@ -4,10 +4,9 @@ import org.cap.apps.studentms.dao.*;
 import org.cap.apps.studentms.entities.Student;
 import org.cap.apps.studentms.util.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.*;
 
-@Component
+@Service
 public class StudentServiceImpl implements IStudentService{
 
 	@Autowired
