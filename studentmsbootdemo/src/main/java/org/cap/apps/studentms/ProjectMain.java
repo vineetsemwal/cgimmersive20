@@ -4,6 +4,7 @@ import org.cap.apps.studentms.dao.StudentDaoImpl;
 import org.cap.apps.studentms.ui.ProjectUi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -18,7 +19,7 @@ import org.springframework.context.annotation.Bean;
 public class ProjectMain {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(ProjectMain.class, args);
+        ApplicationContext context = SpringApplication.run(ProjectMain.class, args);
         ProjectUi projectUi=context.getBean(ProjectUi.class);
         projectUi.runUi();
     }
