@@ -2,6 +2,8 @@ package org.cap.apps.studentms.dao;
 
 import org.cap.apps.studentms.entities.Student;
 import org.cap.apps.studentms.exceptions.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +11,8 @@ import java.util.*;
 
 @Repository
 public class StudentDaoImpl implements IStudentDao {
+
+	private static final Logger Log= LoggerFactory.getLogger(StudentDaoImpl.class);
 
 	private Map<Integer, Student> store = new HashMap<>();
 
@@ -29,6 +33,7 @@ public class StudentDaoImpl implements IStudentDao {
 
 	@Override
 	public Student findById(Integer id) {
+		Log.info("inside findById");
 		checkStudentExists(id);
 		Student student = store.get(id);
 		return student;
