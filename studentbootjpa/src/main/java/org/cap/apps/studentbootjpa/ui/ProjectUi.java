@@ -8,6 +8,7 @@ import org.cap.apps.studentbootjpa.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class ProjectUi {
 	@Autowired
@@ -15,6 +16,7 @@ public class ProjectUi {
 
 	public void runUi() {
 		try {
+
 			Student student1 = add("avichal", 21);
 			int id1 = student1.getId();
 			Student student2 = add("harshil", 21);
