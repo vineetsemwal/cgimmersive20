@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
  * @SpringBootApplication annotation is equal to below three
  * 1) @Configuration
  * 2)@ComponentScan
- * 3) Autoconfiguration
+ * 3)@EnableAutoconfiguration
  */
 
 @SpringBootApplication
