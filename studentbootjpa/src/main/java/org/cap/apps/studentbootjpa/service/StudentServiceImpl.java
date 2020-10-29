@@ -24,7 +24,6 @@ public class StudentServiceImpl implements IStudentService {
         ValidationUtil.checkArgumentNotNull(student);
         ValidationUtil.checkName(student.getName());
         ValidationUtil.checkAge(student.getAge());
-        Log.info("inside service save, dao="+dao);
         student = dao.save(student);
         return student;
     }

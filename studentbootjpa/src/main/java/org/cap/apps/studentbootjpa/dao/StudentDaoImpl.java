@@ -19,7 +19,6 @@ public class StudentDaoImpl implements IStudentDao {
 
     @Override
     public Student save(Student student) {
-        Log.info("*****inside save entity manager="+entityManager);
         entityManager.persist(student);
         return student;
     }
