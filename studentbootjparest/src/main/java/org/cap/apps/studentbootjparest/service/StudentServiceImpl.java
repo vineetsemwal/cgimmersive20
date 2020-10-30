@@ -43,6 +43,9 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public Student update(Student student) {
+        ValidationUtil.checkArgumentNotNull(student);
+        ValidationUtil.checkName(student.getName());
+        ValidationUtil.checkAge(student.getAge());
         student = dao.update(student);
         return student;
     }
