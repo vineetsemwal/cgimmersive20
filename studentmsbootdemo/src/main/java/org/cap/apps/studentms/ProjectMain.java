@@ -10,6 +10,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Arrays;
+
 /**
  * @SpringBootApplication annotation is equal to below three
  * 1) @Configuration
@@ -22,6 +24,10 @@ public class ProjectMain {
     private static final Logger Log= LoggerFactory.getLogger(ProjectMain.class);
 
     public static void main(String[] args) {
+        System.out.println("********arguments");
+        if(args!=null){
+         Arrays.stream(args).forEach(System.out::println);
+        }
         Log.info("application started");
         ApplicationContext context = SpringApplication.run(ProjectMain.class, args);
         ProjectUi projectUi=context.getBean(ProjectUi.class);
