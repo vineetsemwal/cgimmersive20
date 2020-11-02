@@ -23,11 +23,11 @@ public class StudentServiceImpl implements IStudentService {
 
 
     @Override
-    public Student add(Student student) {
+    public Student register(Student student) {
         ValidationUtil.checkArgumentNotNull(student);
         ValidationUtil.checkName(student.getFirstName());
         ValidationUtil.checkAge(student.getAge());
-        boolean exists=dao.existsById(student.getId());
+        boolean exists=student.getId()!=null && dao.existsById(student.getId());
         if(exists){
             throw new StudentAlreadyExistsException("student already exists for id="+student.getId());
         }
