@@ -2,6 +2,7 @@ package org.cap.apps.studentbootjparest.service;
 
 import org.cap.apps.studentbootjparest.dao.*;
 import org.cap.apps.studentbootjparest.entities.Student;
+import org.cap.apps.studentbootjparest.exceptions.StudentAlreadyExistsException;
 import org.cap.apps.studentbootjparest.exceptions.StudentNotFoundException;
 import org.cap.apps.studentbootjparest.util.ValidationUtil;
 import org.slf4j.Logger;
@@ -22,10 +23,14 @@ public class StudentServiceImpl implements IStudentService {
 
 
     @Override
-    public Student save(Student student) {
+    public Student add(Student student) {
         ValidationUtil.checkArgumentNotNull(student);
         ValidationUtil.checkName(student.getFirstName());
         ValidationUtil.checkAge(student.getAge());
+        boolean exists=dao.existsById(student.getId());
+        if(exists){
+            throw new StudentAlreadyExistsException("student already exists for id="+student.getId());
+        }
         student = dao.save(student);
         return student;
     }

@@ -42,7 +42,7 @@ public class StudentController {
     @PostMapping("/add")
     public StudentDetails add(@RequestBody @Valid CreateStudentRequest requestData) {
         Student student = new Student(requestData.getFirstName(), requestData.getLastName(), requestData.getAge());
-        student = service.save(student);
+        student = service.add(student);
         StudentDetails details = studentUtil.toDetails(student);
         return details;
     }

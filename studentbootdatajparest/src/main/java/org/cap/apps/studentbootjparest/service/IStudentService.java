@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IStudentService {
 
-    Student save(Student student);
+    Student add(Student student);
 	
 	Student findById(Integer id);
 	
