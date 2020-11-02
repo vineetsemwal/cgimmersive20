@@ -86,9 +86,9 @@ public class StudentServiceImplTest {
         Integer id=student.getId();
         Student result=service.findById(id);
         Assertions.assertEquals(id,result.getId());
-        Assertions.assertEquals(firstName,student.getFirstName());
-        Assertions.assertEquals(lastName,student.getLastName());
-        Assertions.assertEquals(age,student.getAge());
+        Assertions.assertEquals(firstName,result.getFirstName());
+        Assertions.assertEquals(lastName,result.getLastName());
+        Assertions.assertEquals(age,result.getAge());
     }
 
     /**
