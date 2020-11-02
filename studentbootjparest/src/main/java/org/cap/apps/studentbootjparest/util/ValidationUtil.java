@@ -2,6 +2,7 @@ package org.cap.apps.studentbootjparest.util;
 
 import org.cap.apps.studentbootjparest.exceptions.*;
 
+
 public class ValidationUtil {
 
 	public static void checkArgumentNotNull(Object arg) {
