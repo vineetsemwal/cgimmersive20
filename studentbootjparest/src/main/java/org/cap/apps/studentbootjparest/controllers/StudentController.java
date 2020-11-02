@@ -25,6 +25,8 @@ import java.util.stream.Collectors;
  * @Size(min=2, max=5) to validate string is of length greater than equal to two and smaller than equal to 5
  * @Min(5) to validate number whether number is minimum 5
  * @Max(5) to validate number whether number is maximum 5
+ * @Validated on class will help triggering validation on methods
+ * @Valid if you require to trigger validations on the field names of object
  *
  */
 @Validated
