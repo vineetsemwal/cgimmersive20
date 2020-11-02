@@ -25,7 +25,7 @@ public class StudentServiceImpl implements IStudentService {
     @Override
     public Student register(Student student) {
         ValidationUtil.checkArgumentNotNull(student);
-        ValidationUtil.checkName(student.getFirstName());
+        ValidationUtil.checkName(student.getFirstName(),student.getLastName());
         ValidationUtil.checkAge(student.getAge());
         boolean exists=student.getId()!=null && dao.existsById(student.getId());
         if(exists){
@@ -55,7 +55,7 @@ public class StudentServiceImpl implements IStudentService {
     @Override
     public Student update(Student student) {
         ValidationUtil.checkArgumentNotNull(student);
-        ValidationUtil.checkName(student.getFirstName());
+        ValidationUtil.checkName(student.getFirstName(), student.getLastName());
         ValidationUtil.checkAge(student.getAge());
         student = dao.save(student);
         return student;

@@ -11,8 +11,8 @@ public class ValidationUtil {
 		}
 	}
 
-	public static void checkName(String name) {
-		if (name == null || name.isEmpty()) {
+	public static void checkName(String firstName , String lastName) {
+		if (firstName == null || firstName.isEmpty() || lastName==null|| lastName.isEmpty()) {
 			throw new InvalidStudentNameException("name is not valid");
 		}
 
