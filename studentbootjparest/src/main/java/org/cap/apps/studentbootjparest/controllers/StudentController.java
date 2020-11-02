@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
  * @Min(5) to validate number whether number is minimum 5
  * @Max(5) to validate number whether number is maximum 5
  * @Validated on class will help triggering validation on methods
- * @Valid if you require to trigger validations on the field names of object
+ * @Valid if you require to trigger validations on the fields of object
  *
  */
 @Validated
@@ -83,7 +83,7 @@ public class StudentController {
         return response;
     }
     @GetMapping("/by/name/{name}")
-    public List<StudentDetails> findStudentByUserName(@PathVariable("name") @NotBlank @Size(min = 2, max = 10) String name){
+    public List<StudentDetails> findStudentByName(@PathVariable("name") @NotBlank @Size(min = 2, max = 10) String name){
       List<Student>students=service.findByName(name);
       List<StudentDetails>response=toDetails(students);
       return response;

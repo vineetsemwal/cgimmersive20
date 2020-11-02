@@ -20,4 +20,10 @@ public class CentralizedExceptionHandler {
         return e.getMessage();
     }
 
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(Exception.class)
+    public String handleAll(Exception e){
+        return e.getMessage();
+    }
+
 }
