@@ -48,7 +48,8 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public void deleteById(Integer id) {
-        dao.deleteById(id);
+        Student student=findById(id);
+        dao.delete(student);
     }
 
     @Override
