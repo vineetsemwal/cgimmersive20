@@ -55,4 +55,10 @@ public class StudentServiceImpl implements IStudentService {
         List<Student> list = dao.findAll();
         return list;
     }
+
+    @Override
+    public List<Student> findByName(String name) {
+        List<Student>students=dao.findByName(name);
+        return students;
+    }
 }

@@ -5,14 +5,16 @@ import org.cap.apps.studentbootjparest.entities.Student;
 import java.util.List;
 
 public interface IStudentDao {
-	
-	Student save(Student student);
-	
-	Student findById(Integer id);
-	
-	void deleteById(Integer id);
 
-	Student update(Student student);
+    Student save(Student student);
 
-	List<Student>findAll();
+    Student findById(Integer id);
+
+    void deleteById(Integer id);
+
+    Student update(Student student);
+
+    List<Student> findAll();
+
+    List<Student> findByName(String name);
 }

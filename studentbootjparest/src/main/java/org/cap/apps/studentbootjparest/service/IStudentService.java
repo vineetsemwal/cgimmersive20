@@ -14,5 +14,7 @@ public interface IStudentService {
 
 	Student update(Student student);
 
+	List<Student> findByName(String name);
+
 	List<Student>findAll();
 }

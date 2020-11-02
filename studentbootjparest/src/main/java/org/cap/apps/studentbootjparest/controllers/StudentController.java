@@ -8,13 +8,26 @@ import org.cap.apps.studentbootjparest.exceptions.StudentNotFoundException;
 import org.cap.apps.studentbootjparest.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @NotBlank on string to validate string is not empty
+ * @Size(min=2, max=5) to validate string is of length greater than equal to two and smaller than equal to 5
+ * @Min(5) to validate number whether number is minimum 5
+ * @Max(5) to validate number whether number is maximum 5
+ *
+ */
+@Validated
 @RequestMapping("/students")
 @RestController
 public class StudentController {
@@ -27,7 +40,7 @@ public class StudentController {
      */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/add")
-    public StudentDetails add(@RequestBody CreateStudentRequest requestData) {
+    public StudentDetails add(@RequestBody @Valid CreateStudentRequest requestData) {
         Student student = new Student(requestData.getName(), requestData.getAge());
         student = service.save(student);
         StudentDetails details = toDetails(student);
@@ -35,7 +48,7 @@ public class StudentController {
     }
 
     @PutMapping("/update")
-    public StudentDetails update(@RequestBody UpdateStudentRequest requestData) {
+    public StudentDetails update(@RequestBody @Valid UpdateStudentRequest requestData) {
         Student student = new Student(requestData.getName(), requestData.getAge());
         student.setId(requestData.getId());
         student = service.update(student);
@@ -51,6 +64,7 @@ public class StudentController {
         return details;
     }
 
+
     @GetMapping
     public List<StudentDetails> fetchAll() {
         List<Student> students = service.findAll();
@@ -61,10 +75,16 @@ public class StudentController {
 
 
     @DeleteMapping("/remove/{id}")
-    public String removeStudent(@PathVariable("id") Integer id) {
+    public String removeStudent(@PathVariable("id")  Integer id) {
         service.deleteById(id);
         String response = "removed student with id=" + id;
         return response;
+    }
+    @GetMapping("/by/name/{name}")
+    public List<StudentDetails> findStudentByUserName(@PathVariable("name") @NotBlank @Size(min = 2, max = 10) String name){
+      List<Student>students=service.findByName(name);
+      List<StudentDetails>response=toDetails(students);
+      return response;
     }
 
 

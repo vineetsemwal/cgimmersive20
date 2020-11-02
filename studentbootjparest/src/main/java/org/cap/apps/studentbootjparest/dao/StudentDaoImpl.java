@@ -63,4 +63,13 @@ public class StudentDaoImpl implements IStudentDao {
         List<Student>list=query.getResultList();
         return list;
     }
+
+    @Override
+    public List<Student> findByName(String name) {
+        String ql="from Student where name=:pname";
+        TypedQuery<Student>query=entityManager.createQuery(ql,Student.class);
+        query.setParameter("pname",name);
+        List<Student>list=query.getResultList();
+        return list;
+    }
 }
