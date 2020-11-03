@@ -57,6 +57,10 @@ public class StudentServiceImpl implements IStudentService {
         ValidationUtil.checkArgumentNotNull(student);
         ValidationUtil.checkName(student.getFirstName(), student.getLastName());
         ValidationUtil.checkAge(student.getAge());
+        boolean exists=student.getId()!=null && dao.existsById(student.getId());
+        if(!exists){
+         throw new StudentNotFoundException("Can't update, student not found for id="+student.getId());
+        }
         student = dao.save(student);
         return student;
     }

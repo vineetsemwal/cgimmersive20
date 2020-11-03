@@ -8,6 +8,7 @@ import org.cap.apps.studentbootjparest.service.IStudentService;
 import org.cap.apps.studentbootjparest.util.StudentUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,6 +48,17 @@ public class StudentController {
         return details;
     }
 
+ /*
+    @PostMapping("/add")
+    public ResponseEntity<StudentDetails>add(@RequestBody @Valid CreateStudentRequest requestData){
+        Student student = new Student(requestData.getFirstName(), requestData.getLastName(), requestData.getAge());
+        student = service.register(student);
+        StudentDetails details = studentUtil.toDetails(student);
+        ResponseEntity<StudentDetails>response=new ResponseEntity<StudentDetails>(details,HttpStatus.CREATED);
+        return response;
+    }
+*/
+
     @PutMapping("/update")
     public StudentDetails update(@RequestBody @Valid UpdateStudentRequest requestData) {
         Student student = new Student(requestData.getFirstName(), requestData.getLastName(), requestData.getAge());
@@ -56,6 +68,17 @@ public class StudentController {
         return details;
     }
 
+    /*
+    @PutMapping("/update")
+    public ResponseEntity<StudentDetails> update(@RequestBody @Valid UpdateStudentRequest requestData) {
+        Student student = new Student(requestData.getFirstName(), requestData.getLastName(), requestData.getAge());
+        student.setId(requestData.getId());
+        student = service.update(student);
+        StudentDetails details = studentUtil.toDetails(student);
+       ResponseEntity<StudentDetails>response=new ResponseEntity<>(details,HttpStatus.OK);
+       return response;
+    }
+   */
 
     @GetMapping("/by/id/{id}")
     public StudentDetails fetchStudent(@PathVariable("id") Integer id) {
