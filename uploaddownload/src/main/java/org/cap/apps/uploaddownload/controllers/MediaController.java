@@ -49,8 +49,8 @@ public class MediaController {
 
     @GetMapping(value = "/{filename}/download", produces = "application/octet-stream")
     public ResponseEntity<Resource> downloadMedia(@PathVariable("filename")String filename) throws IOException{
-        File uploaddedFilesDir=util.getUploadDir();
-        File downloadFile=new File(uploaddedFilesDir,filename);
+        File uploadDir=util.getUploadDir();
+        File downloadFile=new File(uploadDir,filename);
         Resource resource=new UrlResource(downloadFile.toURI());
         HttpHeaders headers=new HttpHeaders();
         headers.set("Content-Disposition","attachment; filename="+filename);
