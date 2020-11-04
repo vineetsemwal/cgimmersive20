@@ -1,5 +1,7 @@
 package com.cg.apps.userappsecurity.dto;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 public class AddUserRequest {
