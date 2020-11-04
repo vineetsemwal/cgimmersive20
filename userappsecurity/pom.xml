@@ -12,7 +12,7 @@
 	<artifactId>userappsecurity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>inmemorysecurity</name>
+	<name>userappsecurity</name>
 	<description>Demo project for Spring Boot security</description>
 
 	<properties>
