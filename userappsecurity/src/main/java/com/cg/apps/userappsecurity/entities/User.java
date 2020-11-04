@@ -11,9 +11,13 @@ public class User {
     @Id
     private Long id;
 
+    @Column(unique = true)
     private String username;
 
     private String password;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> roles;
 
     public User(){
 
@@ -25,8 +29,6 @@ public class User {
         this.roles=roles;
     }
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    private Set<String> roles;
 
     public Long getId() {
         return id;
