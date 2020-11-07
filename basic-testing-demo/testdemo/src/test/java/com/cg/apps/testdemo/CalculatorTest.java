@@ -14,5 +14,9 @@ public class CalculatorTest {
         Calculator calculator = new Calculator(adder, subtractor);
         int result = calculator.add(2, 3);
         Assertions.assertEquals(5, result);
+        Mockito.verify(adder).add(2,3);
+        //shortcut of verifying only one time method has run
+        // Mockito.verify(adder,Mockito.times(1)).add(2,3);
+        //
     }
 }
