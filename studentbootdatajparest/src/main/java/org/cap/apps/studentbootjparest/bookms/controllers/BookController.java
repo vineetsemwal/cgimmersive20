@@ -7,6 +7,7 @@ import org.cap.apps.studentbootjparest.bookms.entities.Book;
 import org.cap.apps.studentbootjparest.bookms.service.IBookService;
 import org.cap.apps.studentbootjparest.bookms.util.BookUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/books")
@@ -19,6 +20,7 @@ public class BookController {
     @Autowired
     private BookUtil bookUtil;
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/add")
     public BookDetails add(@RequestBody AddBookRequest requestData){
        Book book= bookService.add(requestData.getBookName());
