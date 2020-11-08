@@ -6,10 +6,12 @@ import org.cap.apps.studentbootjparest.bookms.dto.AddBookRequest;
 import org.cap.apps.studentbootjparest.bookms.dto.BookDetails;
 import org.cap.apps.studentbootjparest.bookms.entities.Book;
 import org.cap.apps.studentbootjparest.bookms.exceptions.BookNotFoundException;
+import org.cap.apps.studentbootjparest.bookms.exceptions.InvalidBookNameException;
 import org.cap.apps.studentbootjparest.bookms.service.IBookService;
 import org.cap.apps.studentbootjparest.bookms.util.BookUtil;
 import org.cap.apps.studentbootjparest.studentms.entities.Student;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -57,7 +59,9 @@ public class BookControllerTest {
         ObjectMapper objectMapper = new ObjectMapper();
         String expectedJson = objectMapper.writeValueAsString(bookDetails);
         System.out.println("inside testFetchBooks_1, expectedJson=" + expectedJson);
-        mvc.perform(get("/books/by/id/100")).andExpect(status().isOk()).andExpect(content().json(expectedJson));
+        mvc.perform(get("/books/by/id/100")).
+                andExpect(status().isOk()).
+                andExpect(content().json(expectedJson));
     }
 
     /**
@@ -68,7 +72,9 @@ public class BookControllerTest {
         long bookId = 100;
         String msg = "book not found";
         when(bookService.findById(bookId)).thenThrow(new BookNotFoundException(msg));
-        mvc.perform(get("/books/by/id/100")).andExpect(status().isNotFound()).andExpect(content().string(msg));
+        mvc.perform(get("/books/by/id/100")).
+                andExpect(status().isNotFound()).
+                andExpect(content().string(msg));
     }
 
     @Test
@@ -88,7 +94,25 @@ public class BookControllerTest {
         String expectedJson=objectMapper.writeValueAsString(bookDetails);
         System.out.println("inside testadd_1, request data json="+requestDataJson);
         System.out.println("inside testadd_1, expected json="+expectedJson);
-        mvc.perform(post("/books/add").content(requestDataJson).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isCreated()).andExpect(content().json(expectedJson));
+        mvc.perform(post("/books/add").content(requestDataJson).
+                contentType(MediaType.APPLICATION_JSON)).
+                andExpect(status().isCreated()).
+                andExpect(content().json(expectedJson));
+    }
+
+    @Test
+    public void testAdd_2() throws Exception{
+        String bookName="";
+        AddBookRequest addBookRequest = new AddBookRequest();
+        addBookRequest.setBookName(bookName);
+        ObjectMapper objectMapper=new ObjectMapper();
+        String requestDataJson=objectMapper.writeValueAsString(addBookRequest);
+        String msg="invalid book name";
+        Mockito.when(bookService.add(bookName)).thenThrow(new InvalidBookNameException(msg));
+        mvc.perform(post("/books/add").content(requestDataJson).
+                contentType(MediaType.APPLICATION_JSON)).
+                andExpect(status().isBadRequest()).
+                andExpect(content().string(msg));
     }
 
 }

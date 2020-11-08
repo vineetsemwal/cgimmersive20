@@ -2,6 +2,7 @@ package org.cap.apps.studentbootjparest.bookms.service;
 
 import org.cap.apps.studentbootjparest.bookms.entities.Book;
 import org.cap.apps.studentbootjparest.bookms.exceptions.BookNotFoundException;
+import org.cap.apps.studentbootjparest.bookms.exceptions.InvalidBookNameException;
 import org.cap.apps.studentbootjparest.bookms.repository.IBookRepository;
 import org.cap.apps.studentbootjparest.studentms.dao.IStudentDao;
 import org.cap.apps.studentbootjparest.studentms.entities.Student;
@@ -35,6 +36,9 @@ public class BookServiceImpl implements IBookService{
 
     @Override
     public Book add(String bookName) {
+        if(bookName ==null || bookName.isEmpty()){
+           throw new InvalidBookNameException("invalid book name");
+        }
         Book book=new Book();
         book.setBookName(bookName);
         book=bookRepository.save(book);
