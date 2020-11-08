@@ -15,6 +15,15 @@ public class Book {
     @Id
     private Long id;
 
+    public Book(){
+
+    }
+
+    public Book(String bookName, Student student){
+        this.bookName=bookName;
+        this.student=student;
+    }
+
     private String bookName;
 
     @ManyToOne

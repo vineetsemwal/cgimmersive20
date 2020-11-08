@@ -18,7 +18,7 @@ public class BookUtil {
      details.setBookName(book.getBookName());
         Student student=book.getStudent();
         if(student!=null) {
-            details.setAge(student.getAge());
+            details.setStudentAge(student.getAge());
             details.setFirstName(student.getFirstName());
             details.setLastName(student.getLastName());
             details.setStudentId(student.getId());

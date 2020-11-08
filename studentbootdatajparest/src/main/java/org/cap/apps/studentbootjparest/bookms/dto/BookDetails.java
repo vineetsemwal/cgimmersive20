@@ -15,6 +15,7 @@ public class BookDetails {
 
     }
 
+
     public Long getId() {
         return id;
     }
@@ -55,11 +56,11 @@ public class BookDetails {
         this.lastName = lastName;
     }
 
-    public Integer getAge() {
+    public Integer getStudentAge() {
         return studentAge;
     }
 
-    public void setAge(Integer age) {
+    public void setStudentAge(Integer age) {
         this.studentAge = age;
     }
 }
