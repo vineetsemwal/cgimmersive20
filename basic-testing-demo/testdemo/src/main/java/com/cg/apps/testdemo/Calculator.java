@@ -11,7 +11,7 @@ public class Calculator {
     }
 
     public int add(int num1, int num2){
-        System.out.println("inside add of caluclator");
+        System.out.println("inside add of calculator");
        int result= adder.add(num1,num2);
        return result;
     }

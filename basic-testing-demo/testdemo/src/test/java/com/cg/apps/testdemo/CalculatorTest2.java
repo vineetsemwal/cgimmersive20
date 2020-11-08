@@ -2,14 +2,28 @@ package com.cg.apps.testdemo;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-public class CalculatorTest {
+/**
+ * use with annotations
+ */
+@ExtendWith(MockitoExtension.class)
+public class CalculatorTest2 {
 
+    @Mock
+    Adder adder;
+
+    @Spy
+    @InjectMocks// for injecting mocks
+    Calculator calculatorSpy;
 
     @Test
     public void testAdd_1() {
-        Adder adder = Mockito.mock(Adder.class);
         Mockito.when(adder.add(2,3)).thenReturn(5);
         Calculator calculator = new Calculator(adder);
         int result = calculator.add(2, 3);
@@ -22,13 +36,10 @@ public class CalculatorTest {
 
     @Test
     public void testMultiByTwo_1(){
-        Adder adder = Mockito.mock(Adder.class);
-        Calculator calculator=new Calculator(adder);
-        Calculator spy= Mockito.spy(calculator);
         //Mockito.when(spy.multiply(5,2)).thenReturn(10);should not be done in this way here
-        Mockito.doReturn(10).when(spy).multiply(5,2);
-        int result= spy.multiplyByTwo(5);
+        Mockito.doReturn(10).when(calculatorSpy).multiply(5,2);
+        int result= calculatorSpy.multiplyByTwo(5);
         Assertions.assertEquals(10,result);
-        Mockito.verify(spy).multiply(5,2);
+        Mockito.verify(calculatorSpy).multiply(5,2);
     }
 }
