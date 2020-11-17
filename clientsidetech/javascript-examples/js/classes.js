@@ -13,13 +13,49 @@ toString(){
 }
 }
 
-let user1=new User(1,'harshil');
-let user2=new User(2,'jay');
+class Customer extends User{
+balance;
 
-console.log("user1 id ="+user1.id+" name="+user1.name);
-let user1Text=user1.toString();
-console.log("user1 tostring ="+user1Text)
-console.log("user2 id="+user2.id+" name"+user2.name)
-let user2Text=user2.toString();
-console.log("user 2 text="+user2Text);
+constructor(id,name,balance){
+    super(id,name);
+    this.balance=balance;
+}
+toString(){
+    let text=this.id+" "+this.name+" "+this.balance;
+ return text;
+}
+
+} 
+
+
+class Admin extends User{
+    organization;
+
+    constructor(id, name,org){
+        super(id,name);
+        this.organization=org;
+    }
+    toString(){
+        let text=this.id+" "+this.name+" "+this.organization;
+     return text;
+    }
+    
+}
+
+let customer1=new Customer(1,'avichal',200);
+let admin=new Admin(2,'shubank','capgemini');
+
+console.log("customer ="+customer1.id+" "+customer1.name+" "+customer1.balance);
+let customerText=customer1.toString();
+console.log("customer1 text= "+customerText);
+console.log("admin="+admin.id+" name="+admin.name+" organizatioon="+admin.organization);
+let adminText=admin.toString();
+console.log("admin to string="+adminText);
+
+
+
+
+
+
+
 
