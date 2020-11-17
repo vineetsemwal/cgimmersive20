@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script type="text/javascript">
+
+    function greet(){
+    var desiredText="<h3> welcome to javascript </h3>";    
+    var element =document.getElementById("greeting-container");
+    element.innerHTML=desiredText;
+     console.log("element changed");
+    }
+
+    </script>
+
+</head>
+
+<body>
+<h1>javascript example</h1>
+
+<button onclick="greet()"> Greet  </button>
+    
+
+<div id="greeting-container">
+
+</div>
+
+</body>
+
+</html>

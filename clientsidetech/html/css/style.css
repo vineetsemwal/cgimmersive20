@@ -1,0 +1,21 @@
+p{
+    background-color: blue;
+}
+
+.redbox{
+    background-color: red;
+    margin: 50px;
+    padding: 40px;    
+}
+
+.yellowbox{
+    background-color: yellow;
+    margin: 50px;
+    padding: 40px;    
+}
+
+#describe{
+    background-color: brown;
+}
+
+img[src="images/india.png"] { border: 5px solid #000; }
