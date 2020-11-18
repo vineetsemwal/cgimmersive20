@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-property-binding',
+  selector: 'property-binding',
   templateUrl: './property-binding.component.html',
   styleUrls: ['./property-binding.component.css']
 })
-export class PropertyBindingComponent implements OnInit {
+export class PropertyBindingComponent {
 
-  constructor() { }
+  description:string="property binding demo description";
 
-  ngOnInit(): void {
-  }
+  linkUrl:string="http://google.com";
+
+  imgUrl="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png";
 
 }
