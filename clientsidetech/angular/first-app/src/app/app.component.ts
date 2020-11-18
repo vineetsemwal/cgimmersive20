@@ -16,7 +16,14 @@ export class AppComponent {
     new Trainee(3,"jay"),
     new Trainee(4,"sahitya")
   
-  ]
+  ];
+
+
+  getDescription():string{
+  return this.description;
+  }
+
+
 
 }
 
