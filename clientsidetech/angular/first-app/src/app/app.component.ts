@@ -10,7 +10,13 @@ export class AppComponent {
 
   description:string="our first attempt at writing";
 
-  trainee:Trainee=new Trainee(1,"harshil");
+  trainees=[
+    new Trainee(1,"harshil"),
+    new Trainee(2, "swaiti"),
+    new Trainee(3,"jay"),
+    new Trainee(4,"sahitya")
+  
+  ]
 
 }
 
