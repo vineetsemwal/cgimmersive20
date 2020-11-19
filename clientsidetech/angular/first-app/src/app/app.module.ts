@@ -11,6 +11,7 @@ import { StyleDemoComponent } from './style-demo/style-demo.component';
 import { CommonModule } from '@angular/common';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { StringLengthPipe } from './pipes/stringtlengthpipe';
+import { SmallestPipe } from './pipes/smallestpipe';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { StringLengthPipe } from './pipes/stringtlengthpipe';
     TwoWayComponent,
     StyleDemoComponent,
     PipeDemoComponent,
-    StringLengthPipe
+    StringLengthPipe,
+    SmallestPipe
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,

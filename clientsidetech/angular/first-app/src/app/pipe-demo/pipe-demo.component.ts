@@ -15,4 +15,6 @@ export class PipeDemoComponent  {
   currentDate=new Date();
 
   trainee=new Trainee(2,'jay');
+
+  numbers=[2,1,4,5,13];
 }
