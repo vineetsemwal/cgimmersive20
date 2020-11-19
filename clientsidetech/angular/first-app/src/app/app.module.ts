@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { StringLengthPipe } from './pipes/stringtlengthpipe';
 import { SmallestPipe } from './pipes/smallestpipe';
+import { SubstringPipe } from './pipe-demo/substring';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SmallestPipe } from './pipes/smallestpipe';
     StyleDemoComponent,
     PipeDemoComponent,
     StringLengthPipe,
-    SmallestPipe
+    SmallestPipe,
+    SubstringPipe
   ],
 
   imports: [
