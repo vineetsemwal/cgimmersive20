@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Trainee } from '../model/trainee';
 
 @Component({
   selector: 'pipe-demo',
@@ -11,4 +12,7 @@ export class PipeDemoComponent  {
 
   balance:number=100.23;
 
+  currentDate=new Date();
+
+  trainee=new Trainee(2,'jay');
 }

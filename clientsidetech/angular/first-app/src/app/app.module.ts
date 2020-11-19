@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { StyleDemoComponent } from './style-demo/style-demo.component';
 import { CommonModule } from '@angular/common';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { StringLengthPipe } from './pipes/stringtlengthpipe';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,10 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
     PropertyBindingComponent,
     TwoWayComponent,
     StyleDemoComponent,
-    PipeDemoComponent
+    PipeDemoComponent,
+    StringLengthPipe
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
