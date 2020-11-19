@@ -1,0 +1,15 @@
+<h1>Attribute directive ngStyle , ngclass demo</h1>
+
+<div [ngStyle]="{'color':colorValue , 'background-color': backgroundColorValue}">
+
+    My style used
+
+</div>
+
+<div [ngClass]="{'redbox': text.length%2===0}">
+redbox
+</div>
+
+<div [ngClass]="{'bluebox': text.length%2!==0}">
+bluebox
+</div>
