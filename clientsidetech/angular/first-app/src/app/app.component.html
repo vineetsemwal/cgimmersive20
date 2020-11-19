@@ -2,10 +2,42 @@
 
 <h3>{{getDescription()}}</h3>
 
-<div *ngFor="let trainee of trainees; let i =index">
-( {{i +1}} ) {{trainee.id}} , {{trainee.name}}
+<table border="1">
+    <tr>
+     <th>Index</th> <th>Id</th> <th>Name</th>`   
+    </tr>
 
-</div>
+
+<tr *ngFor="let trainee of trainees; let i =index">
+
+
+<td>( {{i +1}} ) </td>
+<td>{{trainee.id}} </td>
+<td>{{trainee.name}}</td>
+</tr>
+
+</table>
+
+
+
+<h3 *ngIf="title.length%2===0">
+    Using only if,
+    
+    Title is of even length
+</h3>
+
+
+
+<h3 *ngIf="title.length%2==0; else odd">
+    Using both if and else,
+    Title is of even length
+</h3>
+
+<ng-template #odd>
+    <h3>
+    Title is of odd length
+    </h3>
+</ng-template>
 
 <br>
 
