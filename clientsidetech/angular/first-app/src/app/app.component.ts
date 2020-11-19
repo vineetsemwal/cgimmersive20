@@ -7,6 +7,7 @@ import { Trainee } from './model/trainee';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
+
   title:string = 'first-app';
 
   description:string="our first attempt at writing";
