@@ -11,7 +11,15 @@ class User{
      let text:string=this.id+" "+this.name;
      return text;
     }
+
+
+   display():void{
+    console.log(this.id+" "+this.name);   
+     }
+
+    
     }
+
     
     class Customer extends User{
     balance:number;
@@ -42,6 +50,7 @@ class User{
         
     }
     
+
     let customer1:Customer=new Customer(1,'avichal',200);
     let admin:Admin=new Admin(2,'shubank','capgemini');
     

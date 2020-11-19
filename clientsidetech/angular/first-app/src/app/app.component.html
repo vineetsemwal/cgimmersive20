@@ -2,13 +2,10 @@
 
 <h3>{{getDescription()}}</h3>
 
-Trainee1 is {{trainees[0].id}} , name is {{trainees[0].name}}
-<br>
-Trainee2 is {{trainees[1].id}} , name is {{trainees[1].name}}
-<br>
-Trainee 3 is {{trainees[2].id}} , name is {{trainees[2].name}}
-<br>
-Trainee 4 is {{trainees[3].id}} , name is {{trainees[3].name}}
+<div *ngFor="let trainee of trainees; let i =index">
+( {{i +1}} ) {{trainee.id}} , {{trainee.name}}
+
+</div>
 
 <br>
 
