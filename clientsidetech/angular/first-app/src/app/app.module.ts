@@ -9,6 +9,7 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import { FormsModule } from '@angular/forms';
 import { StyleDemoComponent } from './style-demo/style-demo.component';
 import { CommonModule } from '@angular/common';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     EventBindComponent,
     PropertyBindingComponent,
     TwoWayComponent,
-    StyleDemoComponent
+    StyleDemoComponent,
+    PipeDemoComponent
   ],
   imports: [
     BrowserModule,
