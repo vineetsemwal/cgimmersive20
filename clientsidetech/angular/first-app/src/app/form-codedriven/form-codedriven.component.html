@@ -1,0 +1,27 @@
+<h1>Form handling code driven</h1>
+
+<form [formGroup]="userForm" (ngSubmit)=addUser()>
+    <div>
+        <label>Full Name</label>
+        <input  name="fullname"  formControlName="fullname">     
+        
+        </div>
+        
+        <div>
+        <label>Age</label>    
+        <input type="number"  name="age" formControlName="age">
+        </div>
+        
+        <input type="submit" value="Submit Form">
+        
+    
+
+</form>
+
+
+<h3>Details submitted</h3>
+
+<div *ngIf="user!==undefined">
+{{user.name}} {{user.age}}
+
+</div>

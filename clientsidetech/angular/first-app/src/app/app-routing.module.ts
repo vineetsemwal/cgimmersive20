@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EventBindComponent } from './event-bind/event-bind.component';
+import { FormCodedrivenComponent } from './form-codedriven/form-codedriven.component';
 import { FormTemplatedrivenComponent } from './form-templatedriven/form-templatedriven.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
@@ -17,6 +18,11 @@ const routes: Routes = [
 path:"templateform",
 component:FormTemplatedrivenComponent
 
+}
+,
+{
+path:'codedrivenform',
+component:FormCodedrivenComponent
 }
   ,
 
