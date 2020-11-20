@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from '../model/user';
 
 @Component({
@@ -14,8 +14,8 @@ nameCtrl:FormControl;
 ageCtrl:FormControl;
 
 constructor(builder:FormBuilder){
- this.nameCtrl =builder.control('');
- this.ageCtrl=builder.control('');
+ this.nameCtrl =builder.control('',[Validators.required, Validators.minLength(2)]);
+ this.ageCtrl=builder.control('', [Validators.required]);
  this.userForm=builder.group(
 {
 fullname:this.nameCtrl,

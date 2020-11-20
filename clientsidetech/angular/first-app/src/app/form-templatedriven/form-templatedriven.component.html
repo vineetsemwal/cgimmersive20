@@ -4,14 +4,14 @@
 
 <div>
 <label>Full Name</label>
-<input  name="fullname"  ngModel #nameCtrl=ngModel required minlength="2">     
+<input  name="fullname"  ngModel #nameCtrl=ngModel required minlength="2" class="error">     
 
 
-<div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.required">
+<div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.required" class="error">
     name is required
 </div>
 
-<div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.minlength">
+<div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.minlength" class="error">
 Min length should be 2
 </div>
 </div>
@@ -20,7 +20,7 @@ Min length should be 2
 <label>Age</label>    
 <input type="number"  name="age" ngModel #ageCtrl=ngModel required>
 
-<div *ngIf="ageCtrl.errors!=null &&  ageCtrl.errors.required ">
+<div *ngIf="ageCtrl.errors!=null &&  ageCtrl.errors.required " class="error">
 Age is required
 </div>
 

@@ -1,16 +1,32 @@
 <h1>Form handling code driven</h1>
 
-<form [formGroup]="userForm" (ngSubmit)=addUser()>
+<form [formGroup]="userForm" (ngSubmit)="userForm.valid && addUser()">
     <div>
         <label>Full Name</label>
         <input  name="fullname"  formControlName="fullname">     
         
+
+
+        <div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.required" class="error">
+            name is required
         </div>
+        
+        <div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.minlength" class="error">
+        Min length should be 2
+        </div>
+
+    </div>
         
         <div>
         <label>Age</label>    
         <input type="number"  name="age" formControlName="age">
-        </div>
+        
+    
+   <div *ngIf="ageCtrl.errors!=null &&  ageCtrl.errors.required " class="error">
+    Age is required
+    </div>
+    
+    </div>
         
         <input type="submit" value="Submit Form">
         
