@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EventBindComponent } from './event-bind/event-bind.component';
+import { FormTemplatedrivenComponent } from './form-templatedriven/form-templatedriven.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StyleDemoComponent } from './style-demo/style-demo.component';
@@ -11,7 +12,12 @@ const routes: Routes = [
     path:'two',
     component:TwoWayComponent
   }
+  ,
+{
+path:"templateform",
+component:FormTemplatedrivenComponent
 
+}
   ,
 
   {

@@ -13,6 +13,7 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { StringLengthPipe } from './pipes/stringtlengthpipe';
 import { SmallestPipe } from './pipes/smallestpipe';
 import { SubstringPipe } from './pipe-demo/substring';
+import { FormTemplatedrivenComponent } from './form-templatedriven/form-templatedriven.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SubstringPipe } from './pipe-demo/substring';
     PipeDemoComponent,
     StringLengthPipe,
     SmallestPipe,
-    SubstringPipe
+    SubstringPipe,
+    FormTemplatedrivenComponent
   ],
 
   imports: [

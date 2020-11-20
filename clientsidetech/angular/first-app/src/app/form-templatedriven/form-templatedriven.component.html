@@ -1,0 +1,25 @@
+<h1>Form handling template driven</h1>
+
+<form #myform="ngForm" (ngSubmit)=addUser(myform) >
+
+<div>
+<label>Full Name</label>
+<input  name="fullname"  ngModel>     
+
+</div>
+
+<div>
+<label>Age</label>    
+<input type="number"  name="age" ngModel>
+</div>
+
+<input type="submit" value="Submit Form">
+
+</form>
+
+<h3>Details submitted</h3>
+
+<div *ngIf="user!==undefined">
+{{user.name}} {{user.age}}
+
+</div>
