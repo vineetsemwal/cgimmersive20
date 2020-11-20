@@ -1,16 +1,29 @@
 <h1>Form handling template driven</h1>
 
-<form #myform="ngForm" (ngSubmit)=addUser(myform) >
+<form #myform="ngForm" (ngSubmit)="myform.valid && addUser(myform) ">
 
 <div>
 <label>Full Name</label>
-<input  name="fullname"  ngModel>     
+<input  name="fullname"  ngModel #nameCtrl=ngModel required minlength="2">     
 
+
+<div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.required">
+    name is required
+</div>
+
+<div *ngIf="nameCtrl.errors!=null && nameCtrl.errors.minlength">
+Min length should be 2
+</div>
 </div>
 
 <div>
 <label>Age</label>    
-<input type="number"  name="age" ngModel>
+<input type="number"  name="age" ngModel #ageCtrl=ngModel required>
+
+<div *ngIf="ageCtrl.errors!=null &&  ageCtrl.errors.required ">
+Age is required
+</div>
+
 </div>
 
 <input type="submit" value="Submit Form">
