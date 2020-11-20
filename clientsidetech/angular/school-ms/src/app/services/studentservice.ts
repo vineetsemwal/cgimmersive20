@@ -6,6 +6,7 @@ export class StudentService{
 
     students=[]
 
+    
       generateId():number{
          return this.students.length+1;
       }
