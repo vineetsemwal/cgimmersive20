@@ -42,18 +42,7 @@ public class StudentController {
     @Autowired
     private StudentUtil studentUtil;
 
-    /**
-     * effective url will be http://localhost:8585/students/add
-     */
-    @ApiOperation(value = "registers user and returns details of user",
-    consumes = "application/json",
-     produces = "application/json"
 
-    )
-    @ApiResponses({
-      @ApiResponse(code = 201, message = "Created", response = StudentDetails.class)     ,
-      @ApiResponse(code = 400,message="Can't be blank", response = String.class)
-    })
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/add")
     public StudentDetails add(@RequestBody @Valid CreateStudentRequest requestData) {
@@ -96,13 +85,7 @@ public class StudentController {
     }
    */
 
-    @ApiOperation(value = "gets student by id if students exist for id else 404")
-    @ApiResponses(
-            {
-             @ApiResponse(code = 200,message = "OK", response = StudentDetails.class),
-             @ApiResponse(code = 404,message = "Not Found", response = String.class)
-            }
-    )
+
     @GetMapping("/by/id/{id}")
     public StudentDetails fetchStudent(@PathVariable("id") Integer id) {
         Student student = service.findById(id);
