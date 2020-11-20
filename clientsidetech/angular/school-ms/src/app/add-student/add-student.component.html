@@ -1,0 +1,50 @@
+<h1>Add Student</h1>
+
+<form #myform=ngForm (ngSubmit)="myform.valid && addStudent(myform)">
+
+ <div>
+ <label>First Name </label>    
+<input name="firstName" ngModel #firstNameCtrl=ngModel required minlength="2" >
+
+
+<div *ngIf="firstNameCtrl.errors!=null && firstNameCtrl.errors.required" class="error">
+   First name is required
+</div>
+
+<div *ngIf="firstNameCtrl.errors!=null && firstNameCtrl.errors.minlength" class="error">
+Min length should be 2
+</div>
+
+</div>   
+
+ <div>
+ <label>Last Name</label>    
+ <input name="lastName" ngModel #lastNameCtrl=ngModel required minlength="2">
+
+
+<div *ngIf="lastNameCtrl.errors!=null && lastNameCtrl.errors.required" class="error">
+  Last name is required
+</div>
+
+<div *ngIf="lastNameCtrl.errors!=null && lastNameCtrl.errors.minlength" class="error">
+Min length should be 2
+</div>
+ </div>
+
+ <div>
+  <label>Age</label>
+  <input name="age" ngModel #ageCtrl=ngModel required>   
+
+<div *ngIf="ageCtrl.errors!=null &&  ageCtrl.errors.required " class="error">
+    Age is required
+    </div>
+    
+ </div>
+
+ <input type="submit" value="Add User">
+</form>
+
+<h3>Details submitted</h3>
+<div *ngIf="student!==undefined">
+{{student.firstName}} {{student.lastName}} {{student.age}}
+</div>
