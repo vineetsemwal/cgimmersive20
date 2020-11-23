@@ -18,7 +18,7 @@ import { StudentlistBynameComponent } from './studentlist-byname/studentlist-byn
     AddStudentComponent,
     StudentDetailsComponent,
     StudentListComponent,
-    StudentlistBynameComponent
+    StudentlistBynameComponent,
   ],
   imports: [
     BrowserModule,
