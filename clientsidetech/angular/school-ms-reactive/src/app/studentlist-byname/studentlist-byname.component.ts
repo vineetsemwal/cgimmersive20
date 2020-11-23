@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Student } from '../model/student';
@@ -9,7 +9,7 @@ import { StudentService } from '../services/studentservice';
   templateUrl: './studentlist-byname.component.html',
   styleUrls: ['./studentlist-byname.component.css']
 })
-export class StudentlistBynameComponent  implements OnInit{
+export class StudentlistBynameComponent  implements OnInit,OnDestroy{
 
   firstname:string;
   students:Student[]=[];
@@ -32,6 +32,10 @@ export class StudentlistBynameComponent  implements OnInit{
       );
     }
    )
+  }
+
+  ngOnDestroy(){
+ console.log("inside ond destroy");
   }
 
 }
