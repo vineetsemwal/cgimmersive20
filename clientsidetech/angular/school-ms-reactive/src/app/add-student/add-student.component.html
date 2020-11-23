@@ -2,9 +2,9 @@
 
 <form #myform=ngForm (ngSubmit)="myform.valid && addStudent(myform)">
 
- <div>
+ <div class="form-group">
  <label>First Name </label>    
-<input name="firstName" ngModel #firstNameCtrl=ngModel required minlength="2" >
+<input name="firstName" ngModel #firstNameCtrl=ngModel required minlength="2"  class="form-control">
 
 
 <div *ngIf="firstNameCtrl.errors!=null && firstNameCtrl.errors.required" class="error">
@@ -17,9 +17,9 @@ Min length should be 2
 
 </div>   
 
- <div>
+ <div class="form-group">
  <label>Last Name</label>    
- <input name="lastName" ngModel #lastNameCtrl=ngModel required minlength="2">
+ <input name="lastName" ngModel #lastNameCtrl=ngModel required minlength="2"  class="form-control"> 
 
 
 <div *ngIf="lastNameCtrl.errors!=null && lastNameCtrl.errors.required" class="error">
@@ -31,9 +31,9 @@ Min length should be 2
 </div>
  </div>
 
- <div>
+ <div class="form-group">
   <label>Age</label>
-  <input name="age" ngModel #ageCtrl=ngModel required>   
+  <input name="age" ngModel #ageCtrl=ngModel required  class="form-control">   
 
 <div *ngIf="ageCtrl.errors!=null &&  ageCtrl.errors.required " class="error">
     Age is required
@@ -41,7 +41,7 @@ Min length should be 2
     
  </div>
 
- <input type="submit" value="Add User">
+ <input type="submit" value="Add User" class="btn btn-primary">
 </form>
 
 <h3>Details submitted</h3>

@@ -1,4 +1,5 @@
 
+<!--
 <a href="" routerLink="home">Home</a>
 <br>
 
@@ -11,5 +12,50 @@
 <br>
 <a href="" routerLink="list-byname/harshil">List Students by firname harshil</a>
 <br>
+-->
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="" routerLink="home">Schools MS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item">
+        
+          <a href="" class="nav-link" routerLink="add-student">Add Student</a>
+       </li>
+       
+        <li class="nav-item">
+          
+          <a href="" class="nav-link" routerLink="list-students">List Students</a>
+        </li>
+       
+        <li>
+            <a href="" class="nav-link" routerLink="student-details">student details by id</a>
+
+        </li>
+
+        <li>
+            <a href="" class="nav-link" routerLink="list-byname/harshil">List Students by firname harshil</a>
+
+        </li>
+     
+      </ul>
+   
+    </div>
+  </nav>
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-9" style="margin-top:50px">
 <router-outlet></router-outlet>
+</div>
+
+</div>    
+
+</div>
