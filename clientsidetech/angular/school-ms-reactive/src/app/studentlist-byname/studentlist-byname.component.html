@@ -1,0 +1,9 @@
+<h1>Fetch students by name</h1>
+
+<h3>First name is {{firstname}}</h3>
+<ul>
+    <li *ngFor="let student of students;">
+        {{student.id}} {{student.firstName}} {{student.lastName}} {{student.age}}
+    </li>
+    
+</ul>

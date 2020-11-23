@@ -10,13 +10,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StudentService } from './services/studentservice';
 import {HttpClientModule} from '@angular/common/http';
+import { StudentlistBynameComponent } from './studentlist-byname/studentlist-byname.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
     StudentDetailsComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentlistBynameComponent
   ],
   imports: [
     BrowserModule,

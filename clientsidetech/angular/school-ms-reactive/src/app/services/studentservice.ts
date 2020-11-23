@@ -27,6 +27,12 @@ export class StudentService{
        return observable; 
       }
 
+      fetchStudententsByFirstName(firstname:string):Observable<Student[]>{
+            const url=this.baseUrl+"/by/firstname/"+firstname;
+            let observable:Observable<Student[]>=this.http.get<Student[]>(url);
+            return observable;
+      }
+
 
       fetchStudentById(id:number):Observable<Student>{
        const url=this.baseUrl+"/by/id/"+id;
