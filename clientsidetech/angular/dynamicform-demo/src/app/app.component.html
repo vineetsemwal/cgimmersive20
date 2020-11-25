@@ -1,0 +1,16 @@
+<form #myform=ngForm (ngSubmit)="submitted(myform)">
+
+  Number of fields required
+<input name="count" type="number" ngModel #countCtrl (keyup)="updateCount(countCtrl.value)">
+
+<div *ngFor="let input of fieldNames;let i=index">
+<input name="{{fieldNames[i]}}" ngModel>
+</div>
+
+<input type="submit" value="Submit">
+</form>
+
+<h3>Names are</h3>
+<div *ngFor="let name of names">
+   {{name}}
+</div>
