@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 export class AuthenticateComponent implements OnInit {
   
-  error:string="";
+  error:string;
   constructor(private service:AuthenticationService,private router: Router) {
    
    }
@@ -32,7 +32,7 @@ let password=data.password;
      this.router.navigate(['app-home']);
    },
    err=>{
-     this.error="couldn't login due to some issue";
+     this.error=err.error;
      console.log("err is "+err.message+" "+err.error);
    }
  );

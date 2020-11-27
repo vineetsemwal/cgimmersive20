@@ -6,7 +6,7 @@ import { Constants } from './constants';
 @Injectable()
 export class AuthenticationService{
 
- static readonly userField="username";
+ readonly userKey="username";
 
   
    constructor(private http:HttpClient){
@@ -26,11 +26,11 @@ loginRequest(username:string, password:string):Observable<boolean> {
 
 saveDetailsOnLoginSuccess(data){
   let username=data.username
-  localStorage.setItem("username",username);
+  localStorage.setItem(this.userKey,username);
 }
 
 isAuthenticated(){
-  let token=localStorage.getItem("username");
+  let token=localStorage.getItem(this.userKey);
   if(token==null || token==undefined ){
    return false;
   }
@@ -39,12 +39,12 @@ isAuthenticated(){
 
 
 getLoginUsername(){
-  let username= localStorage.getItem("username");
+  let username= localStorage.getItem(this.userKey);
   return username;
 }
 
 logout(){
-localStorage.removeItem("username");
+localStorage.removeItem(this.userKey);
 let url=Constants.baseUrl+"/logout";
  let observable=this.http.get(url,{responseType:"text"});
  observable.subscribe(data=>console.log("logout done at server"),
