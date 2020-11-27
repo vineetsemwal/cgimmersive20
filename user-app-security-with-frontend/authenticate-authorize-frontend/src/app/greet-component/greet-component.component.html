@@ -1,0 +1,21 @@
+<h1>Greetings</h1>
+
+Get greeting for admin 
+<button type="button" (click)="getAdminHello()">admin greet</button>
+
+<br>
+Get greeting for manager
+<button type="button" (click)="getManagerHello()">manager greet</button>
+
+<br>
+Get secure greeting
+<button type="button" (click)="getSecureHello()">secure greet</button>
+
+<h3>
+Result is {{resultMsg}}
+
+</h3>
+
+<h3 *ngIf="err">
+error is {{err}}
+</h3>
