@@ -15,14 +15,14 @@ export class GreetComponent implements OnInit {
   err:string='';
 
   constructor(private greetService:GreetService, private authService:AuthenticationService, private router:Router) {
-   let isAuthenticated:boolean= this.authService.isAuthenticated();
-   if(!isAuthenticated){
-     router.navigateByUrl("/authenticate");
-   }
+   
    }
 
   ngOnInit(): void {
-  
+    let isAuthenticated:boolean= this.authService.isAuthenticated();
+    if(!isAuthenticated){
+      this.router.navigateByUrl("/authenticate");
+    }
   }
 
   clearErr(){

@@ -3,11 +3,11 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { AuthenticationService } from '../authservice';
 import { User } from '../model/user';
+import { Constants } from '../constants';
 
 @Injectable()
 export class UserService{
    
-    baseServiceUrl="http://localhost:8585";
  
     constructor(private http:HttpClient,private authService:AuthenticationService){
    
@@ -19,7 +19,7 @@ export class UserService{
      if(username==""|| username==undefined|| username==null){
          return;
      }
-     let url=this.baseServiceUrl+"/c/user/by/username/"+username;  
+     let url=Constants.baseSecureUrl+"/user/by/username/"+username;  
      let observable:Observable<User>=this.http.get<User>(url);
      return observable;
     }

@@ -30,8 +30,8 @@ saveDetailsOnLoginSuccess(data){
 }
 
 isAuthenticated(){
-  let token=localStorage.getItem(this.userKey);
-  if(token==null || token==undefined ){
+  let username=localStorage.getItem(this.userKey);
+  if(username==null || username==undefined ){
    return false;
   }
   return true;

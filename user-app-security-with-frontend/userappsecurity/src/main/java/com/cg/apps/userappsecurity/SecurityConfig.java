@@ -29,18 +29,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       http.cors().configurationSource(corsConfigurationSource()).and().csrf().disable().httpBasic().and().authorizeRequests().
+       http.cors().configurationSource(corsConfigurationSource()).and().
+               csrf().disable().httpBasic().and().authorizeRequests().
             antMatchers("/p/**").permitAll().
                antMatchers("/").permitAll().
                antMatchers("/login").permitAll().
                antMatchers("/c/**").authenticated().
                antMatchers("/m/**").hasAnyRole("MANAGER","ADMIN")
                .antMatchers("/a/**").hasAnyRole("ADMIN")
-               .and().formLogin().permitAll().failureForwardUrl("/loginfail").defaultSuccessUrl("/success").
-               //failureForwardUrl("/fail").
-               and().logout().
-               clearAuthentication(true).
-               deleteCookies("JSESSIONID").
+               .and().
+               formLogin().permitAll().failureForwardUrl("/loginfail").defaultSuccessUrl("/success").
+               and().logout().clearAuthentication(true).deleteCookies("JSESSIONID").
                invalidateHttpSession(true).logoutSuccessUrl("/logoutsuccess");
 
     }
