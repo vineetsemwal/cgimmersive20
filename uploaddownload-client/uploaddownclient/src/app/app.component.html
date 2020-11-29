@@ -1,0 +1,13 @@
+
+<form #myform="ngForm" (ngSubmit)=upload(myform)  >
+  
+  <input type="file" name="file" (change)=chosenFile($event.target.files)>
+  
+  
+  <input type="submit" value="upload">
+  </form>
+
+<h1>
+
+  {{fileUploadResult}}
+</h1>

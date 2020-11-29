@@ -15,6 +15,8 @@ export class AuthenticationService{
 loginRequest(username:string, password:string):Observable<boolean> {
   let url=Constants.baseUrl+"/login";
   let headers:HttpHeaders=new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
+  let headers:HttpHeaders=new HttpHeaders({enctype:"multipart/form-data"});
+  
   let credentials="username="+username +"&password="+password;
   let result:Observable<boolean>= this.http.post<boolean>(url, credentials,
       { headers: headers, withCredentials: true  }      
